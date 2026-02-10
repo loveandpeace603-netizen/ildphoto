@@ -20,43 +20,44 @@ body {
 
 /* ===== DETAIL PAGE ===== */
 .detail {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin: 0;
+  padding: 24px;
+}
+
+.detail .wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px; /* 이미지 | 정보 */
+  gap: 18px;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .main-image {
-  max-width: 900px;
   width: 100%;
+  max-width: 900px;
   aspect-ratio: 1 / 1;
   object-fit: contain;
+  display: block;
 }
 
 .info {
-  max-width: 900px;
-  width: 100%;
-  margin-top: 12px;
+  position: sticky;   /* 스크롤해도 옆에 붙어있게 */
+  top: 24px;
   font-size: 14px;
   line-height: 1.4;
 }
 
-#meta {
-  margin: 0;
-}
+#meta { margin: 0; }
+#desc { margin-top: 6px; color: #555; }
 
-#desc {
-  margin-top: 4px;
-  color: #555;
-}
-
-/* ===== MOBILE ===== */
+/* ===== MOBILE: 정보는 아래 ===== */
 @media (max-width: 768px) {
-  body {
-    padding: 16px;
+  .detail .wrap {
+    grid-template-columns: 1fr;
   }
-
-  .grid {
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    gap: 12px;
+  .info {
+    position: static;
   }
 }
+
