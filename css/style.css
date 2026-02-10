@@ -1,21 +1,62 @@
-/* ===== DETAIL CENTER (NO SCROLL DESKTOP) ===== */
+/* ===== BASE ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 24px;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #000;
+}
+
+/* ===== GRID (THUMBNAILS) ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 데스크탑: 6개 */
+  gap: 16px;
+}
+
+.grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+/* 태블릿 */
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===== DETAIL PAGE (CENTER, NO SCROLL DESKTOP) ===== */
 .detail-center {
   margin: 0;
   height: 100vh;
-  overflow: hidden; /* 데스크탑 스크롤 0 */
+  overflow: hidden; /* 데스크탑 스크롤 제거 */
   padding: 24px;
-  box-sizing: border-box;
 }
 
 .detail-stage {
   height: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center; /* 화면 정중앙 */
   gap: 14px;
-  max-width: 1100px;
-  margin: 0 auto;
 }
 
 .detail-image {
@@ -28,7 +69,7 @@
 
 .detail-meta {
   text-align: center;
-  font-size: 20px;     /* 글씨 크게 */
+  font-size: 20px;
   line-height: 1.25;
 }
 
@@ -42,14 +83,19 @@
   color: #666;
 }
 
-/* MOBILE */
+/* ===== DETAIL MOBILE ===== */
 @media (max-width: 768px) {
-  .detail-center {
+  body {
     padding: 16px;
   }
 
+  .detail-center {
+    padding: 16px;
+    overflow: hidden;
+  }
+
   .detail-image {
-    max-height: calc(100vh - 160px); /* 모바일은 메타+UI 여유 */
+    max-height: calc(100vh - 160px);
   }
 
   .detail-meta {
