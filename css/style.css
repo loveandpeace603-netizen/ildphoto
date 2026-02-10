@@ -83,6 +83,52 @@ body {
   color: #666;
 }
 
+/* ===== DETAIL NAVIGATION ===== */
+
+/* 갤러리로 돌아가기 (왼쪽 위) */
+.nav-back {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 28px;
+  text-decoration: none;
+  color: #000;
+  z-index: 10;
+  opacity: 0.7;
+}
+
+.nav-back:hover {
+  opacity: 1;
+}
+
+/* 좌우 화살표 */
+.nav-arrow {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 48px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  opacity: 0.5;
+  z-index: 10;
+  padding: 0;
+  line-height: 1;
+}
+
+.nav-arrow:hover {
+  opacity: 1;
+}
+
+.nav-prev {
+  left: 20px;
+}
+
+.nav-next {
+  right: 20px;
+}
+
 /* ===== DETAIL MOBILE ===== */
 @media (max-width: 768px) {
   body {
@@ -100,5 +146,13 @@ body {
 
   .detail-meta {
     font-size: 18px;
+  }
+
+  .nav-arrow {
+    font-size: 36px;
+  }
+
+  .nav-back {
+    font-size: 24px;
   }
 }
