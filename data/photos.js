@@ -1,16 +1,13 @@
-const photos = [
-  {
-    id: "p001",
-    file: "p001.jpg",
-    location: "Chicago, USA",
-    year: "2024",
-    description: "About travel."
-  },
-  {
-    id: "p002",
-    file: "p002.jpg",
-    location: "Bangkok, Thailand",
-    year: "2016",
-    description: "Purchased at a night market."
-  }
-];
+const params = new URLSearchParams(window.location.search);
+const id = Number(params.get("id")); // ⭐ 문자열 → 숫자 변환
+
+const photo = photos.find(p => p.id === id);
+if (!photo) {
+  console.error("Photo not found. id:", id);
+  return;
+}
+
+document.getElementById("photo").src = `images/full/${photo.file}`;
+document.getElementById("meta").textContent =
+  `${photo.location}, ${photo.year}`;
+document.getElementById("desc").textContent = photo.description;
