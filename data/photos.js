@@ -35,6 +35,12 @@ const photos = [
     location: "Denver, USA",
     year: "2025"
   },
+ {
+    id: "p009",
+    file: "p009.jpg",
+    location: "Denver, USA",
+    year: "2025"
+  },
   {
     id: "p001",
     file: "p001.jpg",
