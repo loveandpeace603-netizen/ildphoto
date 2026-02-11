@@ -11,6 +11,12 @@ const photos = [
     location: "Namhae German Village, South Korea",
     year: "2026"
   },
+ {
+    id: "p006",
+    file: "p006.jpg",
+    location: "Damyang, South Korea",
+    year: "2026"
+  },
   {
     id: "p003",
     file: "p003.jpg",
