@@ -168,8 +168,8 @@ const photos = [
     continent: "North America"
   },
  {
-    id: "p027",
-    file: "p027.jpg",
+    id: "p028",
+    file: "p028.jpg",
     location: "St Louis, USA",
     year: 2025,
     continent: "North America"
