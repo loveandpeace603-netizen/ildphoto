@@ -47,16 +47,22 @@ const photos = [
     location: "Keystone, USA",
     year: "2025"
   },
+ {
+    id: "p011",
+    file: "p011.jpg",
+    location: "Newyork, USA",
+    year: "2025"
+  },
   {
     id: "p001",
     file: "p001.jpg",
     location: "Bangkok, Thailand",
-    year: "2016"
+    year: "2023"
   },
   {
     id: "p002",
     file: "p002.jpg",
     location: "Bangkok, Thailand",
-    year: "2016"
+    year: "2023"
   }
 ];
