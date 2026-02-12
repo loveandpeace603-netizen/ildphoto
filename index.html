@@ -1,12 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Archive</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
+  <!-- Top bar -->
+  <header class="topbar">
+    <button id="menuBtn" class="menu-btn" aria-label="Open menu">☰</button>
+    <p class="tagline" id="tagline">
+      A timeline of places remembered through objects.
+    </p>
+  </header>
+
+  <!-- Side panel -->
+  <aside id="panel" class="panel" aria-hidden="true">
+    <div class="panel-head">
+      <p class="panel-title">FILTER</p>
+      <button id="closeBtn" class="close-btn" aria-label="Close menu">×</button>
+    </div>
+
+    <div class="panel-section">
+      <p class="panel-label">YEAR</p>
+      <div class="panel-list">
+        <button class="chip" data-year="2020s">2020s</button>
+        <button class="chip" data-year="2010s">2010s</button>
+        <button class="chip" data-year="2000s">2000s</button>
+        <button class="chip" data-year="1990s">1990s</button>
+        <button class="chip" data-year="all">All</button>
+      </div>
+    </div>
+
+    <div class="panel-section">
+      <p class="panel-label">PLACE</p>
+      <div class="panel-list">
+        <button class="chip" data-place="Asia">Asia</button>
+        <button class="chip" data-place="Africa">Africa</button>
+        <button class="chip" data-place="North America">North America</button>
+        <button class="chip" data-place="South America">South America</button>
+        <button class="chip" data-place="Europe">Europe</button>
+        <button class="chip" data-place="Oceania">Oceania</button>
+        <button class="chip" data-place="all">All</button>
+      </div>
+    </div>
+
+    <div class="panel-section">
+      <p class="panel-label">SORT</p>
+      <div class="panel-list">
+        <button class="chip" data-sort="latest">Latest</button>
+        <button class="chip" data-sort="oldest">Oldest</button>
+      </div>
+    </div>
+
+    <div class="panel-section">
+      <button id="resetBtn" class="reset-btn">Reset</button>
+    </div>
+  </aside>
+
+  <!-- Overlay -->
+  <div id="overlay" class="overlay" hidden></div>
+
+  <!-- Gallery -->
   <div class="grid" id="gallery"></div>
 
   <script src="data/photos.js"></script>
