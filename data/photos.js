@@ -252,6 +252,13 @@ const photos = [
     continent: "Asia"
   },
   {
+    id: "p040",
+    file: "p040.jpg",
+    location: "Melaka, Malaysia",
+    year: 2024,
+    continent: "Asia"
+  },
+  {
     id: "p001",
     file: "p001.jpg",
     location: "Bangkok, Thailand",
