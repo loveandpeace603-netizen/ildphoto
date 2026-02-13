@@ -7,6 +7,9 @@ const panel = document.getElementById("panel");
 const overlay = document.getElementById("overlay");
 const resetBtn = document.getElementById("resetBtn");
 
+// ✅ 원래 입력 순서(photos.js에서 위에 있을수록 최신)를 기억하는 맵
+const originalIndex = new Map(photos.map((p, i) => [p.id, i]));
+
 // filter state (continent는 화면에 표시 안 되고, 여기서만 사용됨)
 const state = {
   year: "all",   // "2020s" | "2010s" | "2000s" | "1990s" | "all"
@@ -67,10 +70,22 @@ function applyFilters() {
     items = items.filter(p => p.continent === state.place);
   }
 
-  // SORT
+  // ✅ SORT (year 기준 + 같은 year면 "원래 입력 순서"로 안정 정렬)
   items.sort((a, b) => {
-    if (state.sort === "latest") return b.year - a.year;
-    return a.year - b.year;
+    const ia = originalIndex.get(a.id) ?? 0;
+    const ib = originalIndex.get(b.id) ?? 0;
+
+    if (state.sort === "latest") {
+      // 최신: 연도 큰 게 먼저
+      if (b.year !== a.year) return b.year - a.year;
+      // 같은 연도면: photos.js에서 위(더 최신으로 둔 것) 먼저
+      return ia - ib;
+    } else {
+      // 올드: 연도 작은 게 먼저
+      if (a.year !== b.year) return a.year - b.year;
+      // 같은 연도면: photos.js에서 아래(더 오래된 쪽) 먼저 = 반전
+      return ib - ia;
+    }
   });
 
   render(items);
@@ -117,7 +132,7 @@ resetBtn.addEventListener("click", () => {
 
   document.querySelectorAll(".chip").forEach(b => b.classList.remove("active"));
 
-  // 기본값 버튼 시각적으로 표시(선택)
+  // 기본값 버튼 시각적으로 표시
   const latestBtn = document.querySelector('.chip[data-sort="latest"]');
   if (latestBtn) latestBtn.classList.add("active");
 
@@ -125,7 +140,6 @@ resetBtn.addEventListener("click", () => {
 });
 
 // init
-// 기본값: latest 선택 표시
 const latestBtn = document.querySelector('.chip[data-sort="latest"]');
 if (latestBtn) latestBtn.classList.add("active");
 
