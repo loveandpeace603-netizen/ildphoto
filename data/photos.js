@@ -283,7 +283,14 @@ const photos = [
     id: "p044",
     file: "p044.jpg",
     location: "Bloomington, USA",
-    year: 2024,
+    year: 2023,
+    continent: "North America"
+  },
+ {
+    id: "p045",
+    file: "p045.jpg",
+    location: "Quebec, Canada",
+    year: 2023,
     continent: "North America"
   },
   {
