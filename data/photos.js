@@ -119,6 +119,13 @@ const photos = [
     continent: "North America"
   },
  {
+    id: "p047",
+    file: "p047.jpg",
+    location: "Chicago, USA",
+    year: 2025,
+    continent: "North America"
+  },
+ {
     id: "p020",
     file: "p020.jpg",
     location: "Shirakawago, Japan",
