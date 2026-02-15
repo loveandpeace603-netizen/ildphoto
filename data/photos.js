@@ -1,7 +1,7 @@
 const photos = [
  {
-    id: "p004",
-    file: "p004.jpg",
+    id: "p001",
+    file: "p001.jpg",
     location: "Namhae, South Korea",
     year: 2026,
     continent: "Asia"
