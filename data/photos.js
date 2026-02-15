@@ -167,6 +167,13 @@ const photos = [
     year: 2025,
     continent: "Asia"
   },
+  {
+    id: "p075",
+    file: "p075.jpg",
+    location: "Ulaanbaatar, Mongolia",
+    year: 2025,
+    continent: "Asia"
+  },
  {
     id: "p026",
     file: "p026.jpg",
