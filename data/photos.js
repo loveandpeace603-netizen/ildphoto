@@ -21,8 +21,8 @@ const photos = [
     continent: "Asia"
   },
  {
-    id: "p017",
-    file: "p017.jpg",
+    id: "p092",
+    file: "p092.jpg",
     location: "Fukuoka, Japan",
     year: 2025,
     continent: "Asia"
