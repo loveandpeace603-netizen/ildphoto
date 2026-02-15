@@ -600,5 +600,12 @@ const photos = [
     location: "Guam, USA",
     year: 2022,
     continent: "Oceania"
+  },
+ {
+    id: "p109",
+    file: "p109.jpg",
+    location: "Guam, USA",
+    year: 2022,
+    continent: "Oceania"
   }
 ];
