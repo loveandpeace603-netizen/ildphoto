@@ -520,8 +520,15 @@ const photos = [
  {
     id: "p084",
     file: "p084.jpg",
-    location: "Chiang Mai, Thailand",
+    location: "Miami, USA",
     year: 2023,
-    continent: "Asia"
+    continent: "North America"
+  },
+  {
+    id: "p085",
+    file: "p085.jpg",
+    location: "Miami, USA",
+    year: 2023,
+    continent: "North America"
   }
 ];
