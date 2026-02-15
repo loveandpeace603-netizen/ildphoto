@@ -1,7 +1,7 @@
 const photos = [
  {
-    id: "p001",
-    file: "p001.jpg",
+    id: "p079",
+    file: "p079.jpg",
     location: "Namhae, South Korea",
     year: 2026,
     continent: "Asia"
@@ -499,13 +499,6 @@ const photos = [
  {
     id: "p073",
     file: "p073.jpg",
-    location: "Chiang Mai, Thailand",
-    year: 2023,
-    continent: "Asia"
-  },
-  {
-    id: "p001",
-    file: "p001.jpg",
     location: "Chiang Mai, Thailand",
     year: 2023,
     continent: "Asia"
