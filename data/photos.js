@@ -734,4 +734,11 @@ const photos = [
     year: 2018,
     continent: "Asia"
   },
+   {
+    id: "p128",
+    file: "p128.jpg",
+    location: "Yufuin, Japan",
+    year: 2017,
+    continent: "Asia"
+  },
 ];
