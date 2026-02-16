@@ -635,5 +635,12 @@ const photos = [
     location: "Nagoya, Japan",
     year: 2019,
     continent: "Asia"
+  },
+  {
+    id: "p114",
+    file: "p114.jpg",
+    location: "Nagoya, Japan",
+    year: 2019,
+    continent: "Asia"
   }
 ];
