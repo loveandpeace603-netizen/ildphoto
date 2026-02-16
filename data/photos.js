@@ -692,13 +692,6 @@ const photos = [
     year: 2018,
     continent: "Asia"
   },
-  {
-    id: "p0122",
-    file: "p122.jpg",
-    location: "Ha Noi, Viet Nam",
-    year: 2018,
-    continent: "Asia"
-  },
    {
     id: "p0123",
     file: "p123.jpg",
@@ -709,6 +702,20 @@ const photos = [
     {
     id: "p0124",
     file: "p124.jpg",
+    location: "Ha Noi, Viet Nam",
+    year: 2018,
+    continent: "Asia"
+  },
+   {
+    id: "p0122",
+    file: "p122.jpg",
+    location: "Ha Noi, Viet Nam",
+    year: 2018,
+    continent: "Asia"
+  },
+     {
+    id: "p0125",
+    file: "p125.jpg",
     location: "Ha Noi, Viet Nam",
     year: 2018,
     continent: "Asia"
