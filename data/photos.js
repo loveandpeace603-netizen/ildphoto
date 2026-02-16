@@ -671,4 +671,11 @@ const photos = [
     year: 2018,
     continent: "Asia"
   },
+   {
+    id: "p0119",
+    file: "p119.jpg",
+    location: "Kota Kinabalu, Malaysia",
+    year: 2018,
+    continent: "Asia"
+  },
 ];
