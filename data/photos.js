@@ -663,5 +663,12 @@ const photos = [
     location: "Nagoya, Japan",
     year: 2019,
     continent: "Asia"
-  }
+  },
+  {
+    id: "p0118",
+    file: "p118.jpg",
+    location: "Kota Kinabalu, Malaysia",
+    year: 2018,
+    continent: "Asia"
+  },
 ];
