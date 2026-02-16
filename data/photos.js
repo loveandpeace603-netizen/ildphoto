@@ -748,4 +748,11 @@ const photos = [
     year: 2016,
     continent: "Asia"
   },
+ {
+    id: "p130",
+    file: "p130.jpg",
+    location: "Hua Hin, Thailand",
+    year: 2016,
+    continent: "Asia"
+  },
 ];
