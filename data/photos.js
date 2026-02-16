@@ -707,6 +707,13 @@ const photos = [
     continent: "Europe"
   },
   {
+    id: "p137",
+    file: "p137.jpg",
+    location: "Granada, Spain",
+    year: 2019,
+    continent: "Europe"
+  },
+  {
     id: "p0118",
     file: "p118.jpg",
     location: "Kota Kinabalu, Malaysia",
