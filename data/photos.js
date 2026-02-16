@@ -630,6 +630,13 @@ const photos = [
     continent: "Asia"
   },
  {
+    id: "p115",
+    file: "p115.jpg",
+    location: "Nha Trang, Viet Nam",
+    year: 2019,
+    continent: "Asia"
+  },
+ {
     id: "p113",
     file: "p113.jpg",
     location: "Nagoya, Japan",
