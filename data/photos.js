@@ -727,4 +727,11 @@ const photos = [
     year: 2018,
     continent: "Asia"
   },
+  {
+    id: "p127",
+    file: "p127.jpg",
+    location: "Chiang Mai, Thailand",
+    year: 2018,
+    continent: "Asia"
+  },
 ];
