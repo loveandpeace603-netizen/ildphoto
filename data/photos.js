@@ -867,6 +867,13 @@ const photos = [
     year: 2017,
     continent: "Europe"
   },
+   {
+    id: "p152",
+    file: "p152.jpg",
+    location: "Mostar, Bosnia and Herzegovina",
+    year: 2017,
+    continent: "Europe"
+  },
  {
     id: "p129",
     file: "p129.jpg",
