@@ -889,6 +889,13 @@ const photos = [
     continent: "Europe"
   },
   {
+    id: "p159",
+    file: "p159.jpg",
+    location: "Bled, Slovenia",
+    year: 2017,
+    continent: "Europe"
+  },
+  {
     id: "p158",
     file: "p158.jpg",
     location: "Postojna, Slovenia",
