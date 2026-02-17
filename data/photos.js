@@ -742,56 +742,63 @@ const photos = [
     continent: "Europe"
   },
   {
-    id: "p0118",
+    id: "p118",
     file: "p118.jpg",
     location: "Kota Kinabalu, Malaysia",
     year: 2018,
     continent: "Asia"
   },
    {
-    id: "p0119",
+    id: "p119",
     file: "p119.jpg",
     location: "Kota Kinabalu, Malaysia",
     year: 2018,
     continent: "Asia"
   },
  {
-    id: "p0120",
+    id: "p120",
     file: "p120.jpg",
     location: "Kota Kinabalu, Malaysia",
     year: 2018,
     continent: "Asia"
   },
  {
-    id: "p0121",
+    id: "p121",
     file: "p121.jpg",
     location: "Xian, China",
     year: 2018,
     continent: "Asia"
   },
+ {
+    id: "p145",
+    file: "p145.jpg",
+    location: "Vladivostok, Russia",
+    year: 2018,
+    continent: "Asia"
+  },
    {
-    id: "p0123",
+    id: "p123",
     file: "p123.jpg",
     location: "Ha Long, Viet Nam",
     year: 2018,
     continent: "Asia"
   },
     {
-    id: "p0124",
+    id: "p124",
     file: "p124.jpg",
     location: "Ha Noi, Viet Nam",
     year: 2018,
     continent: "Asia"
   },
    {
-    id: "p0122",
+    id: "p122",
     file: "p122.jpg",
     location: "Ha Noi, Viet Nam",
     year: 2018,
     continent: "Asia"
   },
      {
-    id: "p0125",
+    id: "p125",
     file: "p125.jpg",
     location: "Ha Noi, Viet Nam",
     year: 2018,
