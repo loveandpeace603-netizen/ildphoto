@@ -860,6 +860,13 @@ const photos = [
     year: 2017,
     continent: "Europe"
   },
+  {
+    id: "p160",
+    file: "p160.jpg",
+    location: "Plitvicka jezera, Croatia",
+    year: 2017,
+    continent: "Europe"
+  },
    {
     id: "p151",
     file: "p151.jpg",
