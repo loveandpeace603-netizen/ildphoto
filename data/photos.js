@@ -860,6 +860,13 @@ const photos = [
     year: 2017,
     continent: "Europe"
   },
+   {
+    id: "p151",
+    file: "p151.jpg",
+    location: "Dubrovnik, Croatia",
+    year: 2017,
+    continent: "Europe"
+  },
  {
     id: "p129",
     file: "p129.jpg",
