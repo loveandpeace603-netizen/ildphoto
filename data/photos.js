@@ -1063,6 +1063,13 @@ const photos = [
     year: 2015,
     continent: "Asia"
   },
+ {
+    id: "p176",
+    file: "p176.jpg",
+    location: "Jiufen, Taiwan",
+    year: 2015,
+    continent: "Asia"
+  },
   {
     id: "p174",
     file: "p174.jpg",
