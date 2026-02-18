@@ -1060,7 +1060,7 @@ const photos = [
     id: "p174",
     file: "p174.jpg",
     location: "Calesa, Philippines",
-    year: 2015,
+    year: 2012,
     continent: "Asia"
   },
 ];
