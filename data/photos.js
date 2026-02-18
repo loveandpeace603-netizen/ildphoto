@@ -1057,6 +1057,13 @@ const photos = [
     continent: "Asia"
   },
   {
+    id: "p175",
+    file: "p175.jpg",
+    location: "New Taipei City, Taiwan",
+    year: 2015,
+    continent: "Asia"
+  },
+  {
     id: "p174",
     file: "p174.jpg",
     location: "Calesa, Philippines",
