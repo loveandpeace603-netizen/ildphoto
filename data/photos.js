@@ -993,4 +993,11 @@ const photos = [
     year: 2016,
     continent: "Asia"
   },
+ {
+    id: "p165",
+    file: "p165.jpg",
+    location: "Hoi An, Viet Nam",
+    year: 2016,
+    continent: "Asia"
+  },
 ];
