@@ -1238,6 +1238,13 @@ const photos = [
     year: 2013,
     continent: "Oceania"
   },
+   {
+    id: "p201",
+    file: "p201.jpg",
+    location: "Da Nang, Viet Nam",
+    year: 2013,
+    continent: "Asia"
+  },
   {
     id: "p174",
     file: "p174.jpg",
