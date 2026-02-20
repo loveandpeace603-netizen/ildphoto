@@ -1210,6 +1210,13 @@ const photos = [
     year: 2014,
     continent: "Oceania"
   },
+    {
+    id: "p197",
+    file: "p197.jpg",
+    location: "Princetown, Australia",
+    year: 2014,
+    continent: "Oceania"
+  },
   {
     id: "p174",
     file: "p174.jpg",
