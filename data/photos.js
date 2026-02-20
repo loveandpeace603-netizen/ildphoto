@@ -1357,6 +1357,13 @@ const photos = [
     year: 2012,
     continent: "North America"
   },
+   {
+    id: "p220",
+    file: "p220.jpg",
+    location: "Santa Barbara, USA",
+    year: 2012,
+    continent: "North America"
+  },
   {
     id: "p219",
     file: "p219.jpg",
