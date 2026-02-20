@@ -1281,6 +1281,13 @@ const photos = [
     continent: "Europe"
   },
   {
+    id: "p216",
+    file: "p216.jpg",
+    location: "Paris, France",
+    year: 2013,
+    continent: "Europe"
+  },
+  {
     id: "p207",
     file: "p207.jpg",
     location: "Shenzhen, China",
