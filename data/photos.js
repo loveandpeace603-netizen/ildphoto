@@ -1290,6 +1290,13 @@ const photos = [
    {
     id: "p217",
     file: "p217.jpg",
+    location: "Mont Saint-Michel, France",
+    year: 2013,
+    continent: "Europe"
+  },
+ {
+    id: "p218",
+    file: "p218.jpg",
     location: "Chambord, France",
     year: 2013,
     continent: "Europe"
