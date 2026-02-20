@@ -1385,6 +1385,13 @@ const photos = [
     year: 2012,
     continent: "North America"
   },
+    {
+    id: "p223",
+    file: "p223.jpg",
+    location: "Big Sur, USA",
+    year: 2012,
+    continent: "North America"
+  },
   {
     id: "p174",
     file: "p174.jpg",
