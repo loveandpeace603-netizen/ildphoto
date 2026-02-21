@@ -163,6 +163,7 @@ document.addEventListener("click", (e) => {
 
   sessionStorage.setItem("gallery:state", JSON.stringify(state));
   sessionStorage.setItem("gallery:scrollY", String(window.scrollY));
+  sessionStorage.setItem("gallery:returnUrl", "./index.html");
 });
 
 // ✅ 뒤로 돌아왔을 때 state/scroll 복원 (bfcache 포함)
