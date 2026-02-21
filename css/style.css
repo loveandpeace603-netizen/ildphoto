@@ -189,9 +189,8 @@ body {
     padding: 36px;
     margin: 0;
 
-    /* ✅ 13인치에서 썸네일 크게 보이게: 보통 3~4열 */
-   grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-    gap: 22px;
+ grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* ✅ 5열 목표 */
+    gap: 18px; /* gap도 살짝 줄이면 5열 더 잘 들어감 */
   }
 }
 
