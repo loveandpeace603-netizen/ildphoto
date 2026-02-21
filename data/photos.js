@@ -1624,8 +1624,8 @@ const photos = [
     continent: "Asia"
   },
   {
-    id: "p256",
-    file: "p256.jpg",
+    id: "p257",
+    file: "p257.jpg",
     location: "Gold Coast, Australia",
     year: 2000,
     continent: "Oceania"
