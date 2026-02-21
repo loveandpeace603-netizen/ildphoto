@@ -1596,6 +1596,13 @@ const photos = [
     continent: "Asia"
   },
  {
+    id: "p253",
+    file: "p253.jpg",
+    location: "Shanghai, China",
+    year: 2001,
+    continent: "Asia"
+  },
+    {
     id: "p252",
     file: "p252.jpg",
     location: "Shanghai, China",
@@ -1603,9 +1610,9 @@ const photos = [
     continent: "Asia"
   },
     {
-    id: "p253",
-    file: "p253.jpg",
-    location: "Shanghai, China",
+    id: "p254",
+    file: "p254.jpg",
+    location: "Hong Kong",
     year: 2001,
     continent: "Asia"
   },
