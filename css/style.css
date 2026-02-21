@@ -20,10 +20,11 @@ body {
 .menu-btn {
   border: 1px solid #ddd;
   background: #fff;
-  padding: 8px 10px;
-  font-size: 16px;
+  padding: 10px 14px;      /* ✅ 더 크게 */
+  font-size: 18px;         /* ✅ 더 크게 */
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 12px;
+  line-height: 1;
 }
 
 .menu-btn:hover { background: #f6f6f6; }
@@ -66,7 +67,7 @@ body {
   .tagline { font-size: 13px; }
 }
 
-/* ===== PANEL ===== */
+/* ===== PANEL + OVERLAY (MOBILE/TABLET DRAWER) ===== */
 .overlay {
   position: fixed;
   inset: 0;
@@ -88,9 +89,7 @@ body {
   z-index: 30;
 }
 
-.panel.is-open {
-  transform: translateX(0);
-}
+.panel.is-open { transform: translateX(0); }
 
 .panel-head {
   display: flex;
@@ -114,9 +113,7 @@ body {
   padding: 0 6px;
 }
 
-.panel-section {
-  margin-top: 16px;
-}
+.panel-section { margin-top: 16px; }
 
 .panel-label {
   margin: 0 0 10px 0;
@@ -141,9 +138,7 @@ body {
 }
 
 .chip:hover { background: #f6f6f6; }
-.chip.active {
-  border-color: #000;
-}
+.chip.active { border-color: #000; }
 
 .reset-btn {
   width: 100%;
@@ -155,6 +150,49 @@ body {
 }
 
 .reset-btn:hover { background: #f6f6f6; }
+
+/* ===== DESKTOP SIDEBAR MODE (PANEL ALWAYS VISIBLE) ===== */
+@media (min-width: 1100px) {
+  body {
+    display: flex;
+    padding: 0;            /* ✅ 바디 패딩 제거: 레이아웃 더 깔끔 */
+  }
+
+  /* topbar는 모바일용으로만 */
+  .topbar {
+    display: none;
+  }
+
+  /* overlay는 데스크탑에 필요 없음 */
+  .overlay {
+    display: none !important;
+  }
+
+  /* panel을 drawer → sidebar로 전환 */
+  .panel {
+    position: sticky;      /* ✅ 스크롤해도 화면에 고정 느낌 */
+    top: 0;
+    transform: none !important;
+    transition: none;
+    width: 280px;
+    height: 100vh;
+    padding: 22px;
+    z-index: 1;
+  }
+
+  /* 데스크탑에서는 닫기 버튼 숨김(항상 열려있으니까) */
+  .close-btn {
+    display: none;
+  }
+
+  /* 갤러리 영역은 오른쪽 컨텐츠로 */
+  .grid {
+    flex: 1;
+    padding: 32px;
+    margin: 0;
+    grid-template-columns: repeat(6, 1fr); /* ✅ 데스크탑 6개 유지 */
+  }
+}
 
 /* ===== DETAIL CENTER (NO SCROLL DESKTOP) ===== */
 .detail-center {
@@ -199,6 +237,7 @@ body {
   .detail-image { max-height: calc(100vh - 160px); }
   .detail-meta { font-size: 18px; }
 }
+
 /* ===== DETAIL NAVIGATION (ARROWS) ===== */
 .nav-back {
   position: fixed;
@@ -217,7 +256,7 @@ body {
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 56px;        /* 크게 */
+  font-size: 56px;
   background: none;
   border: none;
   cursor: pointer;
