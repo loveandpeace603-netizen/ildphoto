@@ -1,50 +1,67 @@
-const params = new URLSearchParams(window.location.search);
-const id = params.get("id");
+const imgEl = document.getElementById("photo");
+const locationEl = document.getElementById("location");
+const yearEl = document.getElementById("year");
 
-const index = photos.findIndex(p => p.id === id);
-const photo = photos[index];
-
-if (!photo) {
-  console.error("Photo not found:", id);
-} else {
-  // 이미지 & 메타
-  document.getElementById("photo").src = `./images/full/${photo.file}`;
-  document.getElementById("location").textContent = photo.location;
-
-  // 🔥 year null이면 아무것도 안 보이게
-  document.getElementById("year").textContent =
-    (photo.year !== null && photo.year !== undefined) ? String(photo.year) : "";
-}
-
-// 이전 / 다음 버튼
 const prevBtn = document.querySelector(".nav-prev");
 const nextBtn = document.querySelector(".nav-next");
+const backBtn = document.getElementById("backBtn");
 
-if (index <= 0) {
-  prevBtn.style.display = "none";
+const params = new URLSearchParams(location.search);
+const currentId = params.get("id");
+const ctxId = params.get("ctx") || "gallery";
+
+// 1) 현재 사진 찾기
+const currentPhoto = photos.find(p => String(p.id) === String(currentId));
+
+if (!currentPhoto) {
+  // id가 잘못됐을 때 안전장치
+  location.href = "./index.html";
 } else {
-  prevBtn.onclick = () => {
-    window.location.href = `photo.html?id=${photos[index - 1].id}`;
-  };
+  imgEl.src = `./images/${currentPhoto.file}`;
+  imgEl.alt = `${currentPhoto.location}, ${currentPhoto.year ?? "Unknown"}`;
+  locationEl.textContent = currentPhoto.location ?? "";
+  yearEl.textContent = currentPhoto.year ?? "";
 }
 
-if (index >= photos.length - 1) {
-  nextBtn.style.display = "none";
-} else {
-  nextBtn.onclick = () => {
-    window.location.href = `photo.html?id=${photos[index + 1].id}`;
-  };
+// 2) 컨텍스트(필터 결과 리스트) 기반 prev/next 만들기
+let idList = photos.map(p => String(p.id)); // fallback: 전체
+
+const savedCtx = sessionStorage.getItem(`ctx:${ctxId}`);
+if (savedCtx) {
+  try {
+    const parsed = JSON.parse(savedCtx).map(String);
+    if (Array.isArray(parsed) && parsed.length) idList = parsed;
+  } catch (e) {
+    // ignore, fallback 유지
+  }
 }
 
-// 키보드 네비게이션
-document.addEventListener("keydown", (e) => {
-  if (e.key === "ArrowLeft" && index > 0) {
-    window.location.href = `photo.html?id=${photos[index - 1].id}`;
+const idx = idList.indexOf(String(currentId));
+const prevId = idx > 0 ? idList[idx - 1] : null;
+const nextId = idx >= 0 && idx < idList.length - 1 ? idList[idx + 1] : null;
+
+function goTo(id) {
+  if (!id) return;
+  location.href = `./photo.html?id=${encodeURIComponent(id)}&ctx=${encodeURIComponent(ctxId)}`;
+}
+
+prevBtn.addEventListener("click", () => goTo(prevId));
+nextBtn.addEventListener("click", () => goTo(nextId));
+
+// 끝에서 버튼 동작 막기(원하면 CSS로 disabled 처리 가능)
+if (!prevId) prevBtn.style.visibility = "hidden";
+if (!nextId) nextBtn.style.visibility = "hidden";
+
+// 3) Back: 가능하면 진짜 뒤로가기(스크롤/상태 그대로 복귀)
+backBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  // history 길이가 있으면 뒤로(보던 위치/스크롤 복귀가 가장 정확)
+  if (window.history.length > 1) {
+    window.history.back();
+    return;
   }
-  if (e.key === "ArrowRight" && index < photos.length - 1) {
-    window.location.href = `photo.html?id=${photos[index + 1].id}`;
-  }
-  if (e.key === "Escape") {
-    window.location.href = "index.html";
-  }
+
+  // fallback
+  location.href = "./index.html";
 });
