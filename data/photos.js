@@ -667,7 +667,7 @@ const photos = [
   {
     id: "p114",
     file: "p114.jpg",
-    location: "Nagoya, Japan",
+    location: "Gero, Japan",
     year: 2019,
     continent: "Asia"
   },
@@ -1522,6 +1522,13 @@ const photos = [
     id: "p242",
     file: "p242.jpg",
     location: "Matsumoto, Japan",
+    year: 2010,
+    continent: "Asia"
+  },
+ {
+    id: "p243",
+    file: "p243.jpg",
+    location: "Yokohama, Japan",
     year: 2010,
     continent: "Asia"
   },
