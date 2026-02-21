@@ -155,22 +155,19 @@ body {
 @media (min-width: 1100px) {
   body {
     display: flex;
-    padding: 0;            /* ✅ 바디 패딩 제거: 레이아웃 더 깔끔 */
+    padding: 0;
   }
 
-  /* topbar는 모바일용으로만 */
   .topbar {
     display: none;
   }
 
-  /* overlay는 데스크탑에 필요 없음 */
   .overlay {
     display: none !important;
   }
 
-  /* panel을 drawer → sidebar로 전환 */
   .panel {
-    position: sticky;      /* ✅ 스크롤해도 화면에 고정 느낌 */
+    position: sticky;
     top: 0;
     transform: none !important;
     transition: none;
@@ -180,17 +177,16 @@ body {
     z-index: 1;
   }
 
-  /* 데스크탑에서는 닫기 버튼 숨김(항상 열려있으니까) */
-  .close-btn {
-    display: none;
-  }
+  .close-btn { display: none; }
 
-  /* 갤러리 영역은 오른쪽 컨텐츠로 */
+  /* 🔥 핵심: 자동 열 수 */
   .grid {
     flex: 1;
-    padding: 32px;
+    padding: 36px;
     margin: 0;
-    grid-template-columns: repeat(6, 1fr); /* ✅ 데스크탑 6개 유지 */
+
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 22px;
   }
 }
 
