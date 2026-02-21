@@ -56,12 +56,7 @@ if (!nextId) nextBtn.style.visibility = "hidden";
 backBtn.addEventListener("click", (e) => {
   e.preventDefault();
 
-  // history 길이가 있으면 뒤로(보던 위치/스크롤 복귀가 가장 정확)
-  if (window.history.length > 1) {
-    window.history.back();
-    return;
-  }
-
-  // fallback
-  location.href = "./index.html";
+  // ✅ 항상 갤러리로 복귀 (메인에서 state/scroll 복원됨)
+  const returnUrl = sessionStorage.getItem("gallery:returnUrl") || "./index.html";
+  location.href = returnUrl;
 });
