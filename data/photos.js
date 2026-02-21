@@ -1469,10 +1469,10 @@ const photos = [
     year: 2012,
     continent: "Asia"
   },
-  {
-    id: "p234",
-    file: "p234.jpg",
-    location: "Gold Coast, Australia",
+ {
+    id: "p240",
+    file: "p240.jpg",
+    location: "Brisbane, Australia",
     year: 2011,
     continent: "Oceania"
   },
@@ -1510,5 +1510,12 @@ const photos = [
     location: "Tokyo, Japan",
     year: 2010,
     continent: "Asia"
+  },
+   {
+    id: "p234",
+    file: "p234.jpg",
+    location: "Gold Coast, Australia",
+    year: 2011,
+    continent: "Oceania"
   },
 ];
