@@ -1448,6 +1448,13 @@ const photos = [
     year: 2012,
     continent: "North America"
   },
+   {
+    id: "p233",
+    file: "p233.jpg",
+    location: "Brisbane, Australia",
+    year: 2012,
+    continent: "Oceania"
+  },
   {
     id: "p231",
     file: "p231.jpg",
@@ -1463,10 +1470,10 @@ const photos = [
     continent: "Asia"
   },
   {
-    id: "p233",
-    file: "p233.jpg",
-    location: "Brisbane, Australia",
-    year: 2012,
+    id: "p234",
+    file: "p234.jpg",
+    location: "Gold Coast, Australia",
+    year: 2011,
     continent: "Oceania"
   },
 ];
