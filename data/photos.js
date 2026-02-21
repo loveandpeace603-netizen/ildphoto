@@ -1515,7 +1515,7 @@ const photos = [
     id: "p234",
     file: "p234.jpg",
     location: "Gold Coast, Australia",
-    year: 2011,
+    year: 2002,
     continent: "Oceania"
   },
 ];
