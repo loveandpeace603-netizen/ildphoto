@@ -1616,4 +1616,11 @@ const photos = [
     year: 2001,
     continent: "Asia"
   },
+ {
+    id: "p255",
+    file: "p255.jpg",
+    location: "Brisbane, Australia",
+    year: 2000,
+    continent: "Oceania"
+  },
 ];
