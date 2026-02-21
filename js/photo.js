@@ -1,8 +1,19 @@
+const STORAGE_KEY = "ild_view";
+
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 
-const index = photos.findIndex(p => p.id === id);
-const photo = index >= 0 ? photos[index] : null;
+function loadView() {
+  try {
+    const raw = sessionStorage.getItem(STORAGE_KEY);
+    if (!raw) return null;
+    return JSON.parse(raw);
+  } catch {
+    return null;
+  }
+}
+
+const photo = photos.find(p => p.id === id);
 
 const imgEl = document.getElementById("photo");
 const locEl = document.getElementById("location");
@@ -13,42 +24,50 @@ if (!photo) {
 } else {
   imgEl.src = `./images/full/${photo.file}`;
   imgEl.alt = `${photo.location}${photo.year ? `, ${photo.year}` : ""}`;
-
   locEl.textContent = photo.location;
   yearEl.textContent = (photo.year !== null && photo.year !== undefined) ? String(photo.year) : "";
 }
 
-// 이전 / 다음 버튼
+// ✅ 현재 목록 ids(필터된 결과) 가져오기
+const view = loadView();
+const ids = Array.isArray(view?.ids) && view.ids.length
+  ? view.ids
+  : photos.map(p => p.id);
+
+const currentIndex = ids.indexOf(id);
+
 const prevBtn = document.querySelector(".nav-prev");
 const nextBtn = document.querySelector(".nav-next");
 
-// photo를 못 찾았으면 버튼 둘 다 숨김
-if (!photo || index < 0) {
+function goTo(idx) {
+  window.location.href = `photo.html?id=${ids[idx]}`;
+}
+
+if (!prevBtn || !nextBtn || currentIndex === -1) {
   if (prevBtn) prevBtn.style.display = "none";
   if (nextBtn) nextBtn.style.display = "none";
 } else {
-  if (prevBtn) {
-    if (index <= 0) prevBtn.style.display = "none";
-    else prevBtn.onclick = () => (window.location.href = `photo.html?id=${photos[index - 1].id}`);
-  }
+  if (currentIndex <= 0) prevBtn.style.display = "none";
+  else prevBtn.onclick = () => goTo(currentIndex - 1);
 
-  if (nextBtn) {
-    if (index >= photos.length - 1) nextBtn.style.display = "none";
-    else nextBtn.onclick = () => (window.location.href = `photo.html?id=${photos[index + 1].id}`);
-  }
+  if (currentIndex >= ids.length - 1) nextBtn.style.display = "none";
+  else nextBtn.onclick = () => goTo(currentIndex + 1);
 }
 
-// 키보드 네비게이션
+// 키보드 네비게이션도 현재 목록 기준
 document.addEventListener("keydown", (e) => {
-  if (!photo || index < 0) return;
+  if (currentIndex === -1) return;
 
-  if (e.key === "ArrowLeft" && index > 0) {
-    window.location.href = `photo.html?id=${photos[index - 1].id}`;
-  }
-  if (e.key === "ArrowRight" && index < photos.length - 1) {
-    window.location.href = `photo.html?id=${photos[index + 1].id}`;
-  }
-  if (e.key === "Escape") {
-    window.location.href = "index.html";
-  }
+  if (e.key === "ArrowLeft" && currentIndex > 0) goTo(currentIndex - 1);
+  if (e.key === "ArrowRight" && currentIndex < ids.length - 1) goTo(currentIndex + 1);
+  if (e.key === "Escape") window.location.href = "index.html";
 });
+
+// 뒤로가기(←): index로 이동하면 main.js가 복구함
+const backLink = document.querySelector(".nav-back");
+if (backLink) {
+  backLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.location.href = "index.html";
+  });
+}
