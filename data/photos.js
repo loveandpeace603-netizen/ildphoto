@@ -1483,4 +1483,11 @@ const photos = [
     year: 2010,
     continent: "Asia"
   },
+  {
+    id: "p236",
+    file: "p236.jpg",
+    location: "Tokyo, Japan",
+    year: 2010,
+    continent: "Asia"
+  },
 ];
