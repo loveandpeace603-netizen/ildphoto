@@ -1535,7 +1535,7 @@ const photos = [
  {
     id: "p244",
     file: "p244.jpg",
-    location: "Hong kong",
+    location: "Hong Kong",
     year: 2009,
     continent: "Asia"
   },
@@ -1544,6 +1544,13 @@ const photos = [
     file: "p245.jpg",
     location: "Macau",
     year: 2009,
+    continent: "Asia"
+  },
+  {
+    id: "p246",
+    file: "p246.jpg",
+    location: "Hong Kong",
+    year: 2007,
     continent: "Asia"
   },
    {
