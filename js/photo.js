@@ -10,7 +10,10 @@ if (!photo) {
   // 이미지 & 메타
   document.getElementById("photo").src = `./images/full/${photo.file}`;
   document.getElementById("location").textContent = photo.location;
-  document.getElementById("year").textContent = photo.year;
+
+  // 🔥 year null이면 아무것도 안 보이게
+  document.getElementById("year").textContent =
+    (photo.year !== null && photo.year !== undefined) ? String(photo.year) : "";
 }
 
 // 이전 / 다음 버튼
