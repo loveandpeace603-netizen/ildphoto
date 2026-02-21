@@ -176,7 +176,7 @@ body {
     top: 0;
     transform: none !important;
     transition: none;
-    width: 240px;
+    width: 230px;
     height: 100vh;
     padding: 22px;
     z-index: 1;
@@ -190,7 +190,7 @@ body {
     margin: 0;
 
     /* ✅ 13인치에서 썸네일 크게 보이게: 보통 3~4열 */
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+   grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
     gap: 22px;
   }
 }
