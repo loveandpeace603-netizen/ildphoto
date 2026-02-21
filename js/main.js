@@ -42,9 +42,13 @@ function closePanel() {
 function render(items) {
   gallery.innerHTML = "";
 
+  // ✅ 현재 화면(필터된 결과)을 컨텍스트로 저장
+  const ctxId = "gallery";
+  sessionStorage.setItem(`ctx:${ctxId}`, JSON.stringify(items.map(p => p.id)));
+
   items.forEach((photo) => {
     const link = document.createElement("a");
-    link.href = `./photo.html?id=${photo.id}`;
+    link.href = `./photo.html?id=${photo.id}&ctx=${ctxId}`;
     link.className = "thumb";
 
     const img = document.createElement("img");
@@ -150,6 +154,35 @@ resetBtn.addEventListener("click", () => {
   if (latestBtn) latestBtn.classList.add("active");
 
   applyFilters();
+});
+
+// ✅ 디테일로 나가기 직전: 필터/스크롤 저장 (thumb 클릭 캡처)
+document.addEventListener("click", (e) => {
+  const a = e.target.closest("a.thumb");
+  if (!a) return;
+
+  sessionStorage.setItem("gallery:state", JSON.stringify(state));
+  sessionStorage.setItem("gallery:scrollY", String(window.scrollY));
+});
+
+// ✅ 뒤로 돌아왔을 때 state/scroll 복원 (bfcache 포함)
+window.addEventListener("pageshow", () => {
+  const savedState = sessionStorage.getItem("gallery:state");
+  if (savedState) {
+    const s = JSON.parse(savedState);
+    state.year = s.year ?? "all";
+    state.place = s.place ?? "all";
+    state.sort = s.sort ?? "latest";
+
+    // active UI는 완벽히 맞추려면 추가 동기화가 필요하지만,
+    // 기능적으로는 필터/스크롤 복원이 핵심이라 applyFilters만 먼저 수행
+    applyFilters();
+  }
+
+  const savedY = sessionStorage.getItem("gallery:scrollY");
+  if (savedY) {
+    window.scrollTo(0, parseInt(savedY, 10) || 0);
+  }
 });
 
 // init
