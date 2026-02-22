@@ -1679,4 +1679,11 @@ const photos = [
     year: 1997,
     continent: "Asia"
   },
+   {
+    id: "p264",
+    file: "p264.jpg",
+    location: "Singapore, Singapore",
+    year: 1997,
+    continent: "Asia"
+  },
 ];
