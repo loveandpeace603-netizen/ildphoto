@@ -1822,4 +1822,12 @@ const photos = [
   gifted: true,
   continent: "North America"
   },
+  {
+  id: "p284",
+  file: "p284.jpg",
+  location: "Giza, Egypt",
+  year: null,
+  gifted: true,
+  continent: "Africa"
+  },
 ];
