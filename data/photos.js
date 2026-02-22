@@ -1662,7 +1662,7 @@ const photos = [
     id: "p261",
     file: "p261.jpg",
     location: "Pattaya, Thailand",
-    year: 1998,
+    year: 1997,
     continent: "Asia"
   },
 ];
