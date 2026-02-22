@@ -1763,4 +1763,11 @@ const photos = [
     year: 1994,
     continent: "North America"
   },
+   {
+    id: "p276",
+    file: "p276.jpg",
+    location: "New York, USA",
+    year: 1994,
+    continent: "North America"
+  },
 ];
