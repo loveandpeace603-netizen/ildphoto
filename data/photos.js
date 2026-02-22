@@ -1798,4 +1798,12 @@ const photos = [
     year: 1994,
     continent: "North America"
   },
+ {
+  id: "p281",
+  file: "p281.jpg",
+  location: "Santo Domingo, Dominican Republic",
+  year: null,
+  gifted: true,
+  continent: "North America"
+  },
 ];
