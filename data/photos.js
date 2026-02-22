@@ -1735,16 +1735,16 @@ const photos = [
     year: 1995,
     continent: "North America"
   },
-    {
-    id: "p269",
-    file: "p269.jpg",
+  {
+    id: "p273",
+    file: "p273.jpg",
     location: "Miami, USA",
     year: 1995,
     continent: "North America"
   },
- {
-    id: "p273",
-    file: "p273.jpg",
+    {
+    id: "p269",
+    file: "p269.jpg",
     location: "Miami, USA",
     year: 1995,
     continent: "North America"
