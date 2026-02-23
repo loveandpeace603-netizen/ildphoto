@@ -1837,4 +1837,12 @@ const photos = [
   gifted: true,
   continent: "Africa"
   },
+{
+  id: "p286",
+  file: "p286.jpg",
+  location: "Los Angeles, USA",
+  year: null,
+  gifted: true,
+  continent: "North America"
+  },
 ];
