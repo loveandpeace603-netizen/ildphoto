@@ -1941,4 +1941,12 @@ const photos = [
   gifted: true,
   continent: "Europe"
   },
+    {
+  id: "p299",
+  file: "p299.jpg",
+  location: "Salzburg, Austria",
+  year: null,
+  gifted: true,
+  continent: "Europe"
+  },
 ];
