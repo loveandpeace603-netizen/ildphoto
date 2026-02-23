@@ -1925,4 +1925,12 @@ const photos = [
   gifted: true,
   continent: "Europe"
   },
+ {
+  id: "p297",
+  file: "p297.jpg",
+  location: "San Francisco, USA",
+  year: null,
+  gifted: true,
+  continent: "North America"
+  },
 ];
