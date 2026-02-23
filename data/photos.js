@@ -1909,4 +1909,12 @@ const photos = [
   gifted: true,
   continent: "North America"
   },
+    {
+  id: "p295",
+  file: "p295.jpg",
+  location: "Praha, Czech Republic",
+  year: null,
+  gifted: true,
+  continent: "Europe"
+  },
 ];
