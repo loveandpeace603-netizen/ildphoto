@@ -2003,5 +2003,6 @@ const photos = [
   location: "London, United Kingdom",
   year: null,
   gifted: true,
-  conti
+  continent: "Europe"
+     },
 ];
