@@ -1,4 +1,11 @@
 const photos = [
+{
+    id: "p285",
+    file: "p285.jpg",
+    location: "Chicago, USA",
+    year: 2026,
+    continent: "North America"
+  },
  {
     id: "p079",
     file: "p079.jpg",
