@@ -1997,4 +1997,11 @@ const photos = [
   gifted: true,
   continent: "Europe"
   },
+ {
+  id: "p306",
+  file: "p306.jpg",
+  location: "London, United Kingdom",
+  year: null,
+  gifted: true,
+  conti
 ];
