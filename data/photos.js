@@ -1869,4 +1869,12 @@ const photos = [
   gifted: true,
   continent: "North America"
   },
+{
+  id: "p290",
+  file: "p290.jpg",
+  location: "Rio de Janeiro, Brazil",
+  year: null,
+  gifted: true,
+  continent: "South America"
+  },
 ];
