@@ -2117,4 +2117,12 @@ const photos = [
   gifted: true,
   continent: "North America"
   },
+    {
+  id: "p321",
+  file: "p321.jpg",
+  location: "Praha, Czech Republic",
+  year: null,
+  gifted: true,
+  continent: "Europe"
+  },
 ];
