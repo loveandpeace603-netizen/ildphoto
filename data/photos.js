@@ -2109,4 +2109,12 @@ const photos = [
   gifted: true,
   continent: "North America"
   },
+     {
+  id: "p320",
+  file: "p320.jpg",
+  location: "Havana, Cuba",
+  year: null,
+  gifted: true,
+  continent: "North America"
+  },
 ];
