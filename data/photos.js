@@ -1845,4 +1845,12 @@ const photos = [
   gifted: true,
   continent: "North America"
   },
+    {
+  id: "p287",
+  file: "p287.jpg",
+  location: "Okinawa, Japan",
+  year: null,
+  gifted: true,
+  continent: "Asia"
+  },
 ];
