@@ -2078,6 +2078,14 @@ const photos = [
   continent: "North America"
   },
     {
+  id: "p317",
+  file: "p317.jpg",
+  location: "New Orleans, USA",
+  year: null,
+  gifted: true,
+  continent: "North America"
+  },
+    {
   id: "p316",
   file: "p316.jpg",
   location: "Busan, South Korea",
