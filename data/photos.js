@@ -2013,4 +2013,12 @@ const photos = [
   gifted: true,
   continent: "Asia"
   }, 
+ {
+  id: "p308",
+  file: "p308.jpg",
+  location: "Cape Town, South Africa",
+  year: null,
+  gifted: true,
+  continent: "Africa"
+  }, 
 ];
