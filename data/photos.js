@@ -1933,4 +1933,12 @@ const photos = [
   gifted: true,
   continent: "North America"
   },
+     {
+  id: "p298",
+  file: "p298.jpg",
+  location: "Munich, Germany",
+  year: null,
+  gifted: true,
+  continent: "Europe"
+  },
 ];
