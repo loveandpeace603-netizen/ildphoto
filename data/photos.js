@@ -2053,6 +2053,14 @@ const photos = [
   gifted: true,
   continent: "Asia"
   },
+      {
+  id: "p314",
+  file: "p314.jpg",
+  location: "Praha, Czech Republic",
+  year: null,
+  gifted: true,
+  continent: "Europe"
+  },
        {
   id: "p310",
   file: "p310.jpg",
