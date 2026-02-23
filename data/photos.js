@@ -2005,4 +2005,12 @@ const photos = [
   gifted: true,
   continent: "Europe"
      },
+ {
+  id: "p307",
+  file: "p307.jpg",
+  location: "Qingdao, China",
+  year: null,
+  gifted: true,
+  continent: "Asia"
+  }, 
 ];
