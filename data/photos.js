@@ -107,7 +107,13 @@ const photos = [
     file: "p010.jpg",
     location: "Keystone, USA",
     year: 2025,
-    continent: "North America"
+    continent: "North America",
+         extras: [
+    "p010_1.jpg",
+     "p010_2.jpg",
+    "p010_3.jpg",
+     "p010_4.jpg",
+  ]
   },
  {
     id: "p101",
