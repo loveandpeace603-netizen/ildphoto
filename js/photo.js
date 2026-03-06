@@ -25,10 +25,29 @@ if (!photo) {
   imgEl.src = `./images/full/${photo.file}`;
   imgEl.alt = `${photo.location}${photo.year ? `, ${photo.year}` : ""}`;
   locEl.textContent = photo.location;
-  yearEl.textContent = (photo.year !== null && photo.year !== undefined) ? String(photo.year) : "";
+  yearEl.textContent =
+    (photo.year !== null && photo.year !== undefined) ? String(photo.year) : "";
 }
 
-// ✅ 현재 목록 ids(필터된 결과) 가져오기
+// ✅ extras (city photos)
+const extrasWrap = document.getElementById("extras");
+const extrasGrid = document.getElementById("extrasGrid");
+
+if (photo?.extras && Array.isArray(photo.extras) && photo.extras.length > 0) {
+  extrasWrap.hidden = false;
+
+  photo.extras.forEach((fname) => {
+    const img = document.createElement("img");
+    img.src = `./images/extras/${fname}`;
+    img.alt = `${photo.location} extra photo`;
+    img.loading = "lazy";
+    extrasGrid.appendChild(img);
+  });
+} else if (extrasWrap) {
+  extrasWrap.hidden = true;
+}
+
+// ✅ 현재 필터된 목록 ids 가져오기
 const view = loadView();
 const ids = Array.isArray(view?.ids) && view.ids.length
   ? view.ids
@@ -54,7 +73,7 @@ if (!prevBtn || !nextBtn || currentIndex === -1) {
   else nextBtn.onclick = () => goTo(currentIndex + 1);
 }
 
-// 키보드 네비게이션도 현재 목록 기준
+// 키보드 네비게이션
 document.addEventListener("keydown", (e) => {
   if (currentIndex === -1) return;
 
@@ -63,7 +82,7 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") window.location.href = "index.html";
 });
 
-// 뒤로가기(←): index로 이동하면 main.js가 복구함
+// 뒤로가기(←): index로 이동하면 main.js가 상태/스크롤 복구
 const backLink = document.querySelector(".nav-back");
 if (backLink) {
   backLink.addEventListener("click", (e) => {
