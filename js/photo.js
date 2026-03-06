@@ -29,12 +29,15 @@ if (!photo) {
     (photo.year !== null && photo.year !== undefined) ? String(photo.year) : "";
 }
 
-// ✅ extras (city photos)
+/* ✅ extras (city photos) + scroll hint */
 const extrasWrap = document.getElementById("extras");
 const extrasGrid = document.getElementById("extrasGrid");
+const detailHint = document.getElementById("detailHint");
 
 if (photo?.extras && Array.isArray(photo.extras) && photo.extras.length > 0) {
-  extrasWrap.hidden = false;
+
+  if (extrasWrap) extrasWrap.hidden = false;
+  if (detailHint) detailHint.hidden = false;
 
   photo.extras.forEach((fname) => {
     const img = document.createElement("img");
@@ -43,11 +46,15 @@ if (photo?.extras && Array.isArray(photo.extras) && photo.extras.length > 0) {
     img.loading = "lazy";
     extrasGrid.appendChild(img);
   });
-} else if (extrasWrap) {
-  extrasWrap.hidden = true;
+
+} else {
+
+  if (extrasWrap) extrasWrap.hidden = true;
+  if (detailHint) detailHint.hidden = true;
+
 }
 
-// ✅ 현재 필터된 목록 ids 가져오기
+/* ✅ 현재 필터된 목록 ids 가져오기 */
 const view = loadView();
 const ids = Array.isArray(view?.ids) && view.ids.length
   ? view.ids
@@ -63,27 +70,34 @@ function goTo(idx) {
 }
 
 if (!prevBtn || !nextBtn || currentIndex === -1) {
+
   if (prevBtn) prevBtn.style.display = "none";
   if (nextBtn) nextBtn.style.display = "none";
+
 } else {
+
   if (currentIndex <= 0) prevBtn.style.display = "none";
   else prevBtn.onclick = () => goTo(currentIndex - 1);
 
   if (currentIndex >= ids.length - 1) nextBtn.style.display = "none";
   else nextBtn.onclick = () => goTo(currentIndex + 1);
+
 }
 
-// 키보드 네비게이션
+/* 키보드 네비게이션 */
 document.addEventListener("keydown", (e) => {
+
   if (currentIndex === -1) return;
 
   if (e.key === "ArrowLeft" && currentIndex > 0) goTo(currentIndex - 1);
   if (e.key === "ArrowRight" && currentIndex < ids.length - 1) goTo(currentIndex + 1);
   if (e.key === "Escape") window.location.href = "index.html";
+
 });
 
-// 뒤로가기(←): index로 이동하면 main.js가 상태/스크롤 복구
+/* 뒤로가기 */
 const backLink = document.querySelector(".nav-back");
+
 if (backLink) {
   backLink.addEventListener("click", (e) => {
     e.preventDefault();
