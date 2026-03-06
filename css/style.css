@@ -161,7 +161,6 @@ body {
 
 /* ===== DESKTOP SIDEBAR MODE ===== */
 @media (min-width: 1100px) {
-
   body.archive-page {
     display: flex;
     padding: 0;
@@ -288,9 +287,9 @@ body {
   width: 100%;
 }
 
-/* ✅ 첫 화면을 100vh보다 조금 작게 해서 아래 extras가 살짝 보이게 */
+/* 첫 화면을 더 줄여서 아래 extras가 더 보이게 */
 .detail-hero {
-  min-height: 82vh;
+  min-height: 72vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -305,10 +304,10 @@ body {
   margin: 0 auto;
 }
 
-/* ✅ 자석 사진 더 작게 */
+/* 메인 사진 더 작게 */
 .detail-scroll .detail-image {
-  width: min(560px, 100%);
-  max-height: 58vh;
+  width: min(520px, 100%);
+  max-height: 52vh;
   height: auto;
   object-fit: contain;
   display: block;
@@ -332,13 +331,34 @@ body {
   letter-spacing: 0.06em;
   color: #666;
   text-align: center;
+  opacity: 0.9;
+  animation: hintFloat 2.2s ease-in-out infinite;
 }
 
+@keyframes hintFloat {
+  0% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(4px); }
+  100% { transform: translateX(-50%) translateY(0); }
+}
+
+/* extras가 살짝 위로 올라오며 자연스럽게 보이게 */
 .extras {
   width: 100%;
   max-width: 1200px;
-  margin: 10px auto 0 auto;
+  margin: 6px auto 0 auto;
   padding-bottom: 40px;
+  animation: extrasReveal 700ms ease both;
+}
+
+@keyframes extrasReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .extras-title {
@@ -349,9 +369,9 @@ body {
   font-weight: 600;
 }
 
-/* ✅ 도시사진 더 크게 */
+/* 도시사진 더 크게 */
 .extras-grid {
-  column-width: 420px;
+  column-width: 520px;
   column-gap: 18px;
 }
 
@@ -363,24 +383,28 @@ body {
   break-inside: avoid;
   object-fit: contain;
   aspect-ratio: auto;
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+
+.extras-grid img:hover {
+  transform: scale(1.01);
 }
 
 /* ===== MOBILE DETAIL ===== */
 @media (max-width: 768px) {
-
   .detail-scroll {
     padding: 16px;
   }
 
   .detail-hero {
-    min-height: 76vh;
+    min-height: 68vh;
     padding-top: 16px;
     padding-bottom: 16px;
   }
 
   .detail-scroll .detail-image {
-    width: min(100%, 440px);
-    max-height: 48vh;
+    width: min(100%, 420px);
+    max-height: 44vh;
   }
 
   .detail-scroll .detail-meta {
@@ -393,12 +417,12 @@ body {
   }
 
   .extras {
-    margin-top: 18px;
+    margin-top: 10px;
     padding-bottom: 24px;
   }
 
   .extras-grid {
-    column-width: 260px;
+    column-width: 280px;
     column-gap: 12px;
   }
 
@@ -408,5 +432,4 @@ body {
 
   .nav-arrow { font-size: 40px; }
   .nav-back { font-size: 24px; }
-
 }
