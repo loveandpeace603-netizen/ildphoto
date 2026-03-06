@@ -55,7 +55,7 @@ body {
   display: block;
 }
 
-/* 중간 화면(태블릿/작은 노트북) */
+/* 중간 화면 */
 @media (max-width: 1200px) {
   .grid {
     grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
@@ -75,7 +75,7 @@ body {
   .tagline { font-size: 13px; }
 }
 
-/* ===== PANEL + OVERLAY (MOBILE/TABLET DRAWER) ===== */
+/* ===== PANEL + OVERLAY ===== */
 .overlay {
   position: fixed;
   inset: 0;
@@ -159,8 +159,9 @@ body {
 
 .reset-btn:hover { background: #f6f6f6; }
 
-/* ===== DESKTOP SIDEBAR MODE (ARCHIVE PAGE ONLY) ===== */
+/* ===== DESKTOP SIDEBAR MODE ===== */
 @media (min-width: 1100px) {
+
   body.archive-page {
     display: flex;
     padding: 0;
@@ -198,14 +199,14 @@ body {
   }
 }
 
-/* 아주 큰 모니터 */
+/* 큰 모니터 */
 @media (min-width: 1600px) {
   .grid {
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   }
 }
 
-/* ===== DETAIL CENTER (NO SCROLL DESKTOP) ===== */
+/* ===== DETAIL CENTER ===== */
 .detail-center {
   margin: 0;
   height: 100vh;
@@ -238,17 +239,10 @@ body {
   line-height: 1.25;
 }
 
-.meta-location { 
-  margin: 0; 
-  font-weight: 600; 
-}
+.meta-location { margin: 0; font-weight: 600; }
+.meta-year { margin: 6px 0 0 0; color: #666; }
 
-.meta-year { 
-  margin: 6px 0 0 0; 
-  color: #666; 
-}
-
-/* ===== DETAIL NAVIGATION (ARROWS) ===== */
+/* ===== NAVIGATION ===== */
 .nav-back {
   position: fixed;
   top: 20px;
@@ -299,17 +293,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .detail-scroll .detail-stage {
   width: 100%;
-  max-width: 1100px;
+  max-width: 980px;
   margin: 0 auto;
 }
 
+/* main photo smaller */
 .detail-scroll .detail-image {
-  width: min(900px, 100%);
-  max-height: calc(100vh - 140px);
+  width: min(700px, 100%);
+  max-height: calc(100vh - 220px);
   height: auto;
   object-fit: contain;
   display: block;
@@ -320,12 +316,25 @@ body {
   text-align: center;
   font-size: 20px;
   line-height: 1.25;
+  margin-top: 12px;
+}
+
+/* scroll hint */
+.detail-hint {
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  color: #666;
+  text-align: center;
 }
 
 .extras {
   width: 100%;
   max-width: 1100px;
-  margin: 40px auto 0 auto;
+  margin: 20px auto 0 auto;
   padding-bottom: 40px;
 }
 
@@ -337,61 +346,9 @@ body {
   font-weight: 600;
 }
 
+/* masonry layout */
 .extras-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 16px;
-}
-
-.extras-grid img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  display: block;
-}
-
-/* ===== MOBILE DETAIL ===== */
-@media (max-width: 768px) {
-  .detail-center { 
-    padding: 16px; 
-  }
-
-  .detail-image { 
-    max-height: calc(100vh - 160px); 
-  }
-
-  .detail-meta { 
-    font-size: 18px; 
-  }
-
-  .nav-arrow { 
-    font-size: 40px; 
-  }
-
-  .nav-back { 
-    font-size: 24px; 
-  }
-
-  .detail-scroll {
-    padding: 16px;
-  }
-
-  .detail-scroll .detail-image {
-    max-height: calc(100vh - 160px);
-  }
-
-  .detail-scroll .detail-meta {
-    font-size: 18px;
-  }
-
-  .extras {
-    margin-top: 28px;
-    padding-bottom: 24px;
-  }
-
- /* ===== EXTRAS GRID (mixed orientation) ===== */
-.extras-grid {
-  column-width: 320px;   /* 카드 최소 폭: 화면에 따라 자동으로 열 수 결정 */
+  column-width: 320px;
   column-gap: 16px;
 }
 
@@ -399,7 +356,48 @@ body {
   width: 100%;
   height: auto;
   display: block;
-  margin-bottom: 16px;   /* 카드 간 간격 */
-  break-inside: avoid;   /* 한 사진이 컬럼 중간에서 잘리지 않게 */
+  margin-bottom: 16px;
+  break-inside: avoid;
+  object-fit: contain;
+  aspect-ratio: auto;
 }
+
+/* ===== MOBILE DETAIL ===== */
+@media (max-width: 768px) {
+
+  .detail-scroll {
+    padding: 16px;
+  }
+
+  .detail-scroll .detail-image {
+    width: min(100%, 560px);
+    max-height: calc(100vh - 240px);
+  }
+
+  .detail-scroll .detail-meta {
+    font-size: 18px;
+  }
+
+  .detail-hint {
+    bottom: 16px;
+    font-size: 12px;
+  }
+
+  .extras {
+    margin-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .extras-grid {
+    column-width: 200px;
+    column-gap: 12px;
+  }
+
+  .extras-grid img {
+    margin-bottom: 12px;
+  }
+
+  .nav-arrow { font-size: 40px; }
+  .nav-back { font-size: 24px; }
+
 }
