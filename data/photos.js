@@ -9,6 +9,7 @@ const photos = [
     "p285_1.jpg",
      "p285_2.jpg",
     "p285_3.jpg",
+     "p285_4.jpg",
   ]
   },
  {
