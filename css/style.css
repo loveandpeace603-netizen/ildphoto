@@ -389,8 +389,17 @@ body {
     padding-bottom: 24px;
   }
 
-  .extras-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-  }
+ /* ===== EXTRAS GRID (mixed orientation) ===== */
+.extras-grid {
+  column-width: 320px;   /* 카드 최소 폭: 화면에 따라 자동으로 열 수 결정 */
+  column-gap: 16px;
+}
+
+.extras-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 16px;   /* 카드 간 간격 */
+  break-inside: avoid;   /* 한 사진이 컬럼 중간에서 잘리지 않게 */
+}
 }
