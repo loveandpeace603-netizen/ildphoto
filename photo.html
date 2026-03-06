@@ -5,19 +5,28 @@
   <title>Photo</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body class="detail detail-center">
+<body class="detail detail-scroll">
 
   <a href="./index.html" class="nav-back" aria-label="Back to gallery">←</a>
 
   <button class="nav-arrow nav-prev" type="button" aria-label="Previous photo">‹</button>
   <button class="nav-arrow nav-next" type="button" aria-label="Next photo">›</button>
 
-  <main class="detail-stage">
-    <img id="photo" class="detail-image" alt="" />
-    <div class="detail-meta">
-      <p id="location" class="meta-location"></p>
-      <p id="year" class="meta-year"></p>
-    </div>
+  <main class="detail-page">
+    <section class="detail-hero">
+      <div class="detail-stage">
+        <img id="photo" class="detail-image" alt="" />
+        <div class="detail-meta">
+          <p id="location" class="meta-location"></p>
+          <p id="year" class="meta-year"></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="extras" class="extras" hidden>
+      <h2 class="extras-title">City photos</h2>
+      <div id="extrasGrid" class="extras-grid"></div>
+    </section>
   </main>
 
   <script src="data/photos.js"></script>
