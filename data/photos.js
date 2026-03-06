@@ -68,8 +68,8 @@ const photos = [
     continent: "Asia",
        extras: [
     "p089_1.jpg",
+     "p089_3.jpg",
      "p089_2.jpg",
-    "p089_3.jpg",
      "p089_4.jpg",
     "p089_5.jpg",
   ]
@@ -79,7 +79,15 @@ const photos = [
     file: "p090.jpg",
     location: "Nagasaki, Japan",
     year: 2025,
-    continent: "Asia"
+    continent: "Asia",
+           extras: [
+    "p090_1.jpg",
+     "p090_2.jpg",
+    "p090_3.jpg",
+     "p090_4.jpg",
+    "p090_5.jpg",
+   "p090_6.jpg",
+  ]
   },
     {
     id: "p241",
