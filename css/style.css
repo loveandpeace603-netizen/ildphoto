@@ -36,7 +36,6 @@ body {
 }
 
 /* ===== GRID (THUMBNAILS) ===== */
-/* ✅ 기본은 자동 열: 화면 폭에 맞춰 자연스럽게 2~6열 */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
@@ -56,7 +55,7 @@ body {
   display: block;
 }
 
-/* 중간 화면(태블릿/작은 노트북): 썸네일 조금 작게 → 열 수 더 늘 수 있게 */
+/* 중간 화면(태블릿/작은 노트북) */
 @media (max-width: 1200px) {
   .grid {
     grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
@@ -64,7 +63,7 @@ body {
   }
 }
 
-/* 모바일: 2열 고정이 더 예쁘고 안정적 */
+/* 모바일 */
 @media (max-width: 768px) {
   body { padding: 16px; }
 
@@ -160,18 +159,22 @@ body {
 
 .reset-btn:hover { background: #f6f6f6; }
 
-/* ===== DESKTOP SIDEBAR MODE (PANEL ALWAYS VISIBLE) ===== */
-/* ✅ 사이드바 생기면 오른쪽 영역이 좁아지니 minmax를 키워서 썸네일이 너무 작아지지 않게 */
+/* ===== DESKTOP SIDEBAR MODE (ARCHIVE PAGE ONLY) ===== */
 @media (min-width: 1100px) {
-  body {
+  body.archive-page {
     display: flex;
     padding: 0;
   }
 
-  .topbar { display: none; }
-  .overlay { display: none !important; }
+  .archive-page .topbar {
+    display: none;
+  }
 
-  .panel {
+  .archive-page .overlay {
+    display: none !important;
+  }
+
+  .archive-page .panel {
     position: sticky;
     top: 0;
     transform: none !important;
@@ -182,19 +185,20 @@ body {
     z-index: 1;
   }
 
-  .close-btn { display: none; }
+  .archive-page .close-btn {
+    display: none;
+  }
 
-  .grid {
+  .archive-page .grid {
     flex: 1;
     padding: 36px;
     margin: 0;
-
- grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* ✅ 5열 목표 */
-    gap: 18px; /* gap도 살짝 줄이면 5열 더 잘 들어감 */
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 18px;
   }
 }
 
-/* 아주 큰 모니터에서는 조금 더 촘촘하게(원하면 삭제해도 됨) */
+/* 아주 큰 모니터 */
 @media (min-width: 1600px) {
   .grid {
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -213,7 +217,6 @@ body {
   height: 100%;
   max-width: 1100px;
   margin: 0 auto;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -235,14 +238,14 @@ body {
   line-height: 1.25;
 }
 
-.meta-location { margin: 0; font-weight: 600; }
-.meta-year { margin: 6px 0 0 0; color: #666; }
+.meta-location { 
+  margin: 0; 
+  font-weight: 600; 
+}
 
-/* Mobile detail */
-@media (max-width: 768px) {
-  .detail-center { padding: 16px; }
-  .detail-image { max-height: calc(100vh - 160px); }
-  .detail-meta { font-size: 18px; }
+.meta-year { 
+  margin: 6px 0 0 0; 
+  color: #666; 
 }
 
 /* ===== DETAIL NAVIGATION (ARROWS) ===== */
@@ -279,12 +282,7 @@ body {
 .nav-prev { left: 20px; }
 .nav-next { right: 20px; }
 
-/* Mobile */
-@media (max-width: 768px) {
-  .nav-arrow { font-size: 40px; }
-  .nav-back { font-size: 24px; }
-
-  /* ===== DETAIL PAGE WITH SCROLL + EXTRAS ===== */
+/* ===== DETAIL PAGE WITH SCROLL + EXTRAS ===== */
 .detail-scroll {
   margin: 0;
   padding: 24px;
@@ -297,7 +295,7 @@ body {
 }
 
 .detail-hero {
-  min-height: 100vh; /* 첫 화면을 꽉 채움 */
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -315,6 +313,7 @@ body {
   height: auto;
   object-fit: contain;
   display: block;
+  margin: 0 auto;
 }
 
 .detail-scroll .detail-meta {
@@ -351,8 +350,28 @@ body {
   display: block;
 }
 
-/* Mobile */
+/* ===== MOBILE DETAIL ===== */
 @media (max-width: 768px) {
+  .detail-center { 
+    padding: 16px; 
+  }
+
+  .detail-image { 
+    max-height: calc(100vh - 160px); 
+  }
+
+  .detail-meta { 
+    font-size: 18px; 
+  }
+
+  .nav-arrow { 
+    font-size: 40px; 
+  }
+
+  .nav-back { 
+    font-size: 24px; 
+  }
+
   .detail-scroll {
     padding: 16px;
   }
@@ -374,5 +393,4 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
   }
-}
 }
