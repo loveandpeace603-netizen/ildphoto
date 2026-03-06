@@ -289,7 +289,7 @@ body {
 
 /* 첫 화면을 더 줄여서 아래 extras가 더 보이게 */
 .detail-hero {
-  min-height: 72vh;
+  min-height: 78vh;
   display: flex;
   align-items: center;
   justify-content: center;
