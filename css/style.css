@@ -35,7 +35,7 @@ body {
   color: #444;
 }
 
-/* ===== GRID ===== */
+/* ===== GRID (THUMBNAILS) ===== */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
@@ -55,7 +55,7 @@ body {
   display: block;
 }
 
-/* tablet */
+/* 중간 화면 */
 @media (max-width: 1200px) {
   .grid {
     grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
@@ -63,7 +63,7 @@ body {
   }
 }
 
-/* mobile */
+/* 모바일 */
 @media (max-width: 768px) {
   body { padding: 16px; }
 
@@ -75,7 +75,7 @@ body {
   .tagline { font-size: 13px; }
 }
 
-/* ===== PANEL ===== */
+/* ===== PANEL + OVERLAY ===== */
 .overlay {
   position: fixed;
   inset: 0;
@@ -101,11 +101,14 @@ body {
 
 .panel-head {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   margin-bottom: 14px;
 }
 
 .panel-title {
+  margin: 0;
+  letter-spacing: 0.08em;
   font-size: 12px;
   color: #666;
 }
@@ -115,9 +118,17 @@ body {
   background: transparent;
   font-size: 24px;
   cursor: pointer;
+  padding: 0 6px;
 }
 
 .panel-section { margin-top: 16px; }
+
+.panel-label {
+  margin: 0 0 10px 0;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: #666;
+}
 
 .panel-list {
   display: flex;
@@ -143,37 +154,94 @@ body {
   background: #fff;
   padding: 10px;
   border-radius: 12px;
+  cursor: pointer;
 }
 
-/* ===== DESKTOP SIDEBAR ===== */
-@media (min-width: 1100px) {
+.reset-btn:hover { background: #f6f6f6; }
 
+/* ===== DESKTOP SIDEBAR MODE ===== */
+@media (min-width: 1100px) {
   body.archive-page {
     display: flex;
     padding: 0;
   }
 
-  .archive-page .topbar { display: none; }
+  .archive-page .topbar {
+    display: none;
+  }
 
-  .archive-page .overlay { display: none !important; }
+  .archive-page .overlay {
+    display: none !important;
+  }
 
   .archive-page .panel {
     position: sticky;
+    top: 0;
     transform: none !important;
+    transition: none;
     width: 230px;
     height: 100vh;
     padding: 22px;
+    z-index: 1;
+  }
+
+  .archive-page .close-btn {
+    display: none;
   }
 
   .archive-page .grid {
     flex: 1;
     padding: 36px;
+    margin: 0;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 18px;
   }
 }
 
-/* ===== NAV ===== */
+/* 큰 모니터 */
+@media (min-width: 1600px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+}
+
+/* ===== DETAIL CENTER ===== */
+.detail-center {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  padding: 24px;
+}
+
+.detail-stage {
+  height: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.detail-image {
+  width: min(900px, 100%);
+  max-height: calc(100vh - 140px);
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.detail-meta {
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+.meta-location { margin: 0; font-weight: 600; }
+.meta-year { margin: 6px 0 0 0; color: #666; }
+
+/* ===== NAVIGATION ===== */
 .nav-back {
   position: fixed;
   top: 20px;
@@ -181,6 +249,7 @@ body {
   font-size: 28px;
   text-decoration: none;
   color: #000;
+  z-index: 50;
   opacity: 0.7;
 }
 
@@ -194,7 +263,11 @@ body {
   background: none;
   border: none;
   cursor: pointer;
+  color: #000;
   opacity: 0.45;
+  z-index: 50;
+  padding: 0;
+  line-height: 1;
 }
 
 .nav-arrow:hover { opacity: 1; }
@@ -202,8 +275,7 @@ body {
 .nav-prev { left: 20px; }
 .nav-next { right: 20px; }
 
-/* ===== DETAIL PAGE ===== */
-
+/* ===== DETAIL PAGE WITH SCROLL + EXTRAS ===== */
 .detail-scroll {
   margin: 0;
   padding: 24px;
@@ -215,12 +287,15 @@ body {
   width: 100%;
 }
 
-/* hero smaller so extras visible */
+/* 첫 화면을 더 줄여서 아래 extras가 더 보이게 */
 .detail-hero {
   min-height: 72vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .detail-scroll .detail-stage {
@@ -229,10 +304,10 @@ body {
   margin: 0 auto;
 }
 
-/* MAIN PHOTO (balanced size) */
+/* 메인 사진 더 작게 */
 .detail-scroll .detail-image {
-  width: min(600px, 100%);
-  max-height: 60vh;
+  width: min(520px, 100%);
+  max-height: 52vh;
   height: auto;
   object-fit: contain;
   display: block;
@@ -242,31 +317,48 @@ body {
 .detail-scroll .detail-meta {
   text-align: center;
   font-size: 20px;
+  line-height: 1.25;
   margin-top: 14px;
 }
 
-/* scroll hint */
+/* 아래에 도시사진 존재 힌트 */
 .detail-hint {
-  margin-top: 10px;
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 13px;
+  letter-spacing: 0.06em;
   color: #666;
   text-align: center;
-  animation: hintFloat 2s ease-in-out infinite;
+  opacity: 0.9;
+  animation: hintFloat 2.2s ease-in-out infinite;
 }
 
 @keyframes hintFloat {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(4px); }
-  100% { transform: translateY(0); }
+  0% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(4px); }
+  100% { transform: translateX(-50%) translateY(0); }
 }
 
-/* ===== EXTRAS ===== */
-
+/* extras가 살짝 위로 올라오며 자연스럽게 보이게 */
 .extras {
   width: 100%;
   max-width: 1200px;
-  margin: 10px auto 0 auto;
+  margin: 6px auto 0 auto;
   padding-bottom: 40px;
+  animation: extrasReveal 700ms ease both;
+}
+
+@keyframes extrasReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .extras-title {
@@ -277,6 +369,7 @@ body {
   font-weight: 600;
 }
 
+/* 도시사진 더 크게 */
 .extras-grid {
   column-width: 520px;
   column-gap: 18px;
@@ -288,36 +381,55 @@ body {
   display: block;
   margin-bottom: 18px;
   break-inside: avoid;
-  transition: transform 180ms ease;
+  object-fit: contain;
+  aspect-ratio: auto;
+  transition: transform 180ms ease, opacity 180ms ease;
 }
 
 .extras-grid img:hover {
   transform: scale(1.01);
 }
 
-/* ===== MOBILE ===== */
-
+/* ===== MOBILE DETAIL ===== */
 @media (max-width: 768px) {
-
-  .detail-scroll { padding: 16px; }
-
-  .detail-hero { min-height: 68vh; }
-
-  .detail-scroll .detail-image {
-    width: min(100%, 440px);
-    max-height: 50vh;
+  .detail-scroll {
+    padding: 16px;
   }
 
-  .detail-scroll .detail-meta { font-size: 18px; }
+  .detail-hero {
+    min-height: 68vh;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .detail-scroll .detail-image {
+    width: min(100%, 420px);
+    max-height: 44vh;
+  }
+
+  .detail-scroll .detail-meta {
+    font-size: 18px;
+  }
+
+  .detail-hint {
+    bottom: 4px;
+    font-size: 12px;
+  }
+
+  .extras {
+    margin-top: 10px;
+    padding-bottom: 24px;
+  }
 
   .extras-grid {
-    column-width: 260px;
+    column-width: 280px;
     column-gap: 12px;
   }
 
-  .extras-grid img { margin-bottom: 12px; }
+  .extras-grid img {
+    margin-bottom: 12px;
+  }
 
   .nav-arrow { font-size: 40px; }
   .nav-back { font-size: 24px; }
-
 }
