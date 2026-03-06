@@ -51,14 +51,20 @@ const photos = [
     file: "p092.jpg",
     location: "Fukuoka, Japan",
     year: 2025,
-    continent: "Asia"
+    continent: "Asia",
+     extras: [
+    "p092_1.jpg",
+  ]
   },
  {
     id: "p091",
     file: "p091.jpg",
     location: "Fukuoka, Japan",
     year: 2025,
-    continent: "Asia"
+    continent: "Asia",
+      extras: [
+    "p091_1.jpg",
+  ]
   },
    {
     id: "p089",
