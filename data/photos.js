@@ -4,7 +4,7 @@ const photos = [
     file: "p285.jpg",
     location: "Chicago, USA",
     year: 2026,
-    continent: "North America"
+    continent: "North America",
     extras: [
     "p285_1.jpg",
   ]
