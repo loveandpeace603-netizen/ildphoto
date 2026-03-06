@@ -159,14 +159,26 @@ const photos = [
     file: "p095.jpg",
     location: "Newyork, USA",
     year: 2025,
-    continent: "North America"
+    continent: "North America",
+      extras: [
+    "p095_1.jpg",
+     "p095_2.jpg",
+    "p095_3.jpg",
+     "p095_4.jpg",
+  ]
   },
  {
     id: "p096",
     file: "p096.jpg",
     location: "Newyork, USA",
     year: 2025,
-    continent: "North America"
+    continent: "North America",
+      extras: [
+    "p096_1.jpg",
+     "p096_2.jpg",
+    "p096_3.jpg",
+     "p096_4.jpg",
+  ]
   },
   {
     id: "p014",
