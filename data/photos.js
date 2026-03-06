@@ -46,7 +46,6 @@ const photos = [
      "p093_4.jpg",
   ]
   },
-  },
  {
     id: "p092",
     file: "p092.jpg",
