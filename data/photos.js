@@ -38,7 +38,14 @@ const photos = [
     file: "p093.jpg",
     location: "Damyang, South Korea",
     year: 2026,
-    continent: "Asia"
+    continent: "Asia",
+     extras: [
+    "p093_1.jpg",
+     "p093_2.jpg",
+    "p093_3.jpg",
+     "p093_4.jpg",
+  ]
+  },
   },
  {
     id: "p092",
