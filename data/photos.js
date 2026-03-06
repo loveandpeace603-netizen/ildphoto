@@ -5,6 +5,9 @@ const photos = [
     location: "Chicago, USA",
     year: 2026,
     continent: "North America"
+    extras: [
+    "p285_1.jpg",
+  ]
   },
  {
     id: "p079",
