@@ -288,24 +288,27 @@ body {
   width: 100%;
 }
 
+/* ✅ 첫 화면을 100vh보다 조금 작게 해서 아래 extras가 살짝 보이게 */
 .detail-hero {
-  min-height: 100vh;
+  min-height: 82vh;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .detail-scroll .detail-stage {
   width: 100%;
-  max-width: 980px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
-/* main photo smaller */
+/* ✅ 자석 사진 더 작게 */
 .detail-scroll .detail-image {
-  width: min(700px, 100%);
-  max-height: calc(100vh - 220px);
+  width: min(560px, 100%);
+  max-height: 58vh;
   height: auto;
   object-fit: contain;
   display: block;
@@ -316,13 +319,13 @@ body {
   text-align: center;
   font-size: 20px;
   line-height: 1.25;
-  margin-top: 12px;
+  margin-top: 14px;
 }
 
-/* scroll hint */
+/* 아래에 도시사진 존재 힌트 */
 .detail-hint {
   position: absolute;
-  bottom: 22px;
+  bottom: 8px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 13px;
@@ -333,30 +336,30 @@ body {
 
 .extras {
   width: 100%;
-  max-width: 1100px;
-  margin: 20px auto 0 auto;
+  max-width: 1200px;
+  margin: 10px auto 0 auto;
   padding-bottom: 40px;
 }
 
 .extras-title {
-  margin: 0 0 14px 0;
+  margin: 0 0 16px 0;
   font-size: 14px;
   letter-spacing: 0.08em;
   color: #666;
   font-weight: 600;
 }
 
-/* masonry layout */
+/* ✅ 도시사진 더 크게 */
 .extras-grid {
-  column-width: 320px;
-  column-gap: 16px;
+  column-width: 420px;
+  column-gap: 18px;
 }
 
 .extras-grid img {
   width: 100%;
   height: auto;
   display: block;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
   break-inside: avoid;
   object-fit: contain;
   aspect-ratio: auto;
@@ -369,9 +372,15 @@ body {
     padding: 16px;
   }
 
+  .detail-hero {
+    min-height: 76vh;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
   .detail-scroll .detail-image {
-    width: min(100%, 560px);
-    max-height: calc(100vh - 240px);
+    width: min(100%, 440px);
+    max-height: 48vh;
   }
 
   .detail-scroll .detail-meta {
@@ -379,17 +388,17 @@ body {
   }
 
   .detail-hint {
-    bottom: 16px;
+    bottom: 4px;
     font-size: 12px;
   }
 
   .extras {
-    margin-top: 24px;
+    margin-top: 18px;
     padding-bottom: 24px;
   }
 
   .extras-grid {
-    column-width: 200px;
+    column-width: 260px;
     column-gap: 12px;
   }
 
