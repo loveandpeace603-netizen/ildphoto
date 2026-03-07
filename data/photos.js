@@ -341,7 +341,16 @@ const photos = [
     file: "p076.jpg",
     location: "Daegu, South Korea",
     year: 2025,
-    continent: "Asia"
+    continent: "Asia",
+      extras: [
+     "p076_1.jpg",
+    "p076_2.jpg",
+    "p076_3.jpg",
+      "p076_4.jpg",
+     "p076_5.jpg",
+    "p076_6.jpg",
+   "p076_7.jpg",
+  ]
   },
  {
     id: "p027",
