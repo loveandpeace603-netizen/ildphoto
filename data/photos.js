@@ -479,7 +479,16 @@ const photos = [
     file: "p099.jpg",
     location: "Okinawa, Japan",
     year: 2025,
-    continent: "Asia"
+    continent: "Asia",
+      extras: [
+     "p099_1.jpg",
+    "p099_2.jpg",
+    "p099_3.jpg",
+      "p099_4.jpg",
+     "p099_5.jpg",
+    "p099_6.jpg",
+   "p099_7.jpg",
+  ]
   },
  {
     id: "p100",
