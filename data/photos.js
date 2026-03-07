@@ -273,7 +273,6 @@ const photos = [
      "p113_4.jpg",
       "p113_5.jpg",
    "p113_6.jpg",
-      "p113_7.jpg",
   ]
   },
   {
