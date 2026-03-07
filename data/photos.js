@@ -370,7 +370,18 @@ const photos = [
     file: "p098.jpg",
     location: "St Louis, USA",
     year: 2025,
-    continent: "North America"
+    continent: "North America",
+       extras: [
+     "p098_1.jpg",
+    "p098_2.jpg",
+      "p098_3.jpg",
+     "p098_4.jpg",
+    "p098_5.jpg",
+   "p098_6.jpg",
+     "p098_7.jpg",
+   "p098_8.jpg",
+     "p098_9.jpg",
+  ]
   },
   {
     id: "p029",
