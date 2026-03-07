@@ -546,21 +546,35 @@ const photos = [
     file: "p038.jpg",
     location: "Kuala Lumpur, Malaysia",
     year: 2024,
-    continent: "Asia"
+    continent: "Asia",
+      extras: [
+     "p038_1.jpg",
+  ]
   },
  {
     id: "p039",
     file: "p039.jpg",
     location: "Kuala Lumpur, Malaysia",
     year: 2024,
-    continent: "Asia"
+    continent: "Asia",
+      extras: [
+     "p039_1.jpg",
+    "p039_2.jpg",
+    "p039_3.jpg",
+      "p039_4.jpg",
+     "p039_5.jpg",
+  ]
   },
   {
     id: "p040",
     file: "p040.jpg",
     location: "Melaka, Malaysia",
     year: 2024,
-    continent: "Asia"
+    continent: "Asia",
+       extras: [
+     "p040_1.jpg",
+    "p040_2.jpg",
+  ]
   },
  {
     id: "p042",
