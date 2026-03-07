@@ -581,7 +581,15 @@ const photos = [
     file: "p042.jpg",
     location: "Phu Quoc, Viet Nam",
     year: 2024,
-    continent: "Asia"
+    continent: "Asia",
+       extras: [
+     "p042_1.jpg",
+    "p042_2.jpg",
+      "p042_3.jpg",
+     "p042_4.jpg",
+    "p042_5.jpg",
+   "p042_6.jpg",
+  ]
   },
  {
     id: "p041",
