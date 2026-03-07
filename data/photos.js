@@ -265,7 +265,16 @@ const photos = [
     file: "p113.jpg",
     location: "Nagoya, Japan",
     year: 2025,
-    continent: "Asia"
+    continent: "Asia",
+          extras: [
+    "p113_1.jpg",
+     "p113_2.jpg",
+    "p113_3.jpg",
+     "p113_4.jpg",
+      "p113_5.jpg",
+   "p113_6.jpg",
+      "p113_7.jpg",
+  ]
   },
   {
     id: "p082",
