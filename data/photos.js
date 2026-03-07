@@ -318,7 +318,16 @@ const photos = [
     file: "p077.jpg",
     location: "Hadong, South Korea",
     year: 2025,
-    continent: "Asia"
+    continent: "Asia",
+       extras: [
+     "p077_1.jpg",
+    "p077_7.jpg",
+    "p077_2.jpg",
+      "p077_3.jpg",
+     "p077_4.jpg",
+    "p077_5.jpg",
+   "p077_6.jpg",
+  ]
   },
   {
     id: "p075",
