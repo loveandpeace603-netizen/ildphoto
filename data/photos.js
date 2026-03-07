@@ -292,7 +292,7 @@ const photos = [
     location: "Jeonju, South Korea",
     year: 2025,
     continent: "Asia",
-     [
+    extras: [
     "p083_1.jpg",
      "p083_2.jpg",
     "p083_3.jpg",
