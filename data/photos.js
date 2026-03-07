@@ -427,8 +427,8 @@ const photos = [
   ]
   },
      {
-    id: "p210",
-    file: "p210.jpg",
+    id: "p209",
+    file: "p209.jpg",
     location: "Grand Canyon Village, USA",
     year: 2025,
     continent: "North America"
@@ -1547,8 +1547,8 @@ const photos = [
     continent: "North America"
   },
    {
-    id: "p209",
-    file: "p209.jpg",
+    id: "p210",
+    file: "p210.jpg",
     location: "Grand Canyon Village, USA",
     year: 2012,
     continent: "North America"
