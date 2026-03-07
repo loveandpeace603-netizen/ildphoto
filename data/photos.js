@@ -431,7 +431,16 @@ const photos = [
     file: "p209.jpg",
     location: "Grand Canyon Village, USA",
     year: 2025,
-    continent: "North America"
+    continent: "North America",
+         extras: [
+     "p209_1.jpg",
+    "p209_2.jpg",
+    "p209_3.jpg",
+      "p209_4.jpg",
+     "p209_5.jpg",
+    "p209_6.jpg",
+   "p209_7.jpg",
+  ]
   },
     {
     id: "p211",
