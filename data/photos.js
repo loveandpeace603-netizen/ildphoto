@@ -508,14 +508,23 @@ const photos = [
     file: "p035.jpg",
     location: "Milwaukee, USA",
     year: 2024,
-    continent: "North America"
+    continent: "North America",
+      extras: [
+     "p035_1.jpg",
+    "p035_2.jpg",
+    "p035_3.jpg",
+  ]
   },
  {
     id: "p036",
     file: "p036.jpg",
     location: "Milwaukee, USA",
     year: 2024,
-    continent: "North America"
+    continent: "North America",
+      extras: [
+     "p036_1.jpg",
+    "p036_2.jpg",
+  ]
   },
  {
     id: "p037",
