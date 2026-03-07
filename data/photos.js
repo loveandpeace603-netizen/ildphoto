@@ -245,7 +245,20 @@ const photos = [
     file: "p020.jpg",
     location: "Shirakawago, Japan",
     year: 2025,
-    continent: "Asia"
+    continent: "Asia",
+      extras: [
+    "p020_1.jpg",
+     "p020_2.jpg",
+    "p020_3.jpg",
+     "p020_4.jpg",
+      "p020_5.jpg",
+   "p020_6.jpg",
+      "p020_7.jpg",
+      "p020_8.jpg",
+    "p020_9.jpg",
+   "p020_10.jpg",
+     "p020_11.jpg",
+  ]
   },
     {
     id: "p113",
