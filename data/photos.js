@@ -426,6 +426,20 @@ const photos = [
     "p031_3.jpg",
   ]
   },
+     {
+    id: "p210",
+    file: "p210.jpg",
+    location: "Grand Canyon Village, USA",
+    year: 2025,
+    continent: "North America"
+  },
+    {
+    id: "p211",
+    file: "p211.jpg",
+    location: "Grand Canyon Village, USA",
+    year: 2025,
+    continent: "North America"
+  },
  {
     id: "p032",
     file: "p032.jpg",
@@ -1535,20 +1549,6 @@ const photos = [
    {
     id: "p209",
     file: "p209.jpg",
-    location: "Grand Canyon Village, USA",
-    year: 2012,
-    continent: "North America"
-  },
-  {
-    id: "p210",
-    file: "p210.jpg",
-    location: "Grand Canyon Village, USA",
-    year: 2012,
-    continent: "North America"
-  },
-   {
-    id: "p211",
-    file: "p211.jpg",
     location: "Grand Canyon Village, USA",
     year: 2012,
     continent: "North America"
