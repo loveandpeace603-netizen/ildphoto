@@ -708,14 +708,23 @@ const photos = [
     file: "p051.jpg",
     location: "Osaka, Japan",
     year: 2023,
-    continent: "Asia"
+    continent: "Asia",
+       extras: [
+     "p051_1.jpg",
+    "p051_2.jpg",
+    "p051_3.jpg",
+  ]
   },
    {
     id: "p052",
     file: "p052.jpg",
     location: "Kyoto, Japan",
     year: 2023,
-    continent: "Asia"
+    continent: "Asia",
+    extras: [
+     "p052_1.jpg",
+    "p052_2.jpg",
+    "p052_3.jpg",
   },
   {
     id: "p053",
