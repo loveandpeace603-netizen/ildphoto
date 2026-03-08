@@ -657,28 +657,44 @@ const photos = [
     file: "p045.jpg",
     location: "Quebec, Canada",
     year: 2023,
-    continent: "North America"
+    continent: "North America",
+       extras: [
+     "p045_1.jpg",
+    "p045_2.jpg",
+  ]
   },
  {
     id: "p048",
     file: "p048.jpg",
     location: "Toronto, Canada",
     year: 2023,
-    continent: "North America"
+    continent: "North America",
+      extras: [
+     "p048_1.jpg",
+    "p048_2.jpg",
+  ]
   },
   {
     id: "p049",
     file: "p049.jpg",
     location: "Toronto, Canada",
     year: 2023,
-    continent: "North America"
+    continent: "North America",
+      extras: [
+     "p049_1.jpg",
+    "p049_2.jpg",
+  ]
   },
    {
     id: "p050",
     file: "p050.jpg",
     location: "Toronto, Canada",
     year: 2023,
-    continent: "North America"
+    continent: "North America",
+       extras: [
+     "p050_1.jpg",
+    "p050_2.jpg",
+  ]
   },
  {
     id: "p074",
