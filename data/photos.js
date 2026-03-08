@@ -873,21 +873,36 @@ const photos = [
     file: "p065.jpg",
     location: "Paris, France",
     year: 2023,
-    continent: "Europe"
+    continent: "Europe",
+        extras: [
+     "p065_1.jpg",
+    "p065_2.jpg",
+    "p065_3.jpg",
+         ]   
   },
  {
     id: "p066",
     file: "p066.jpg",
     location: "Paris, France",
     year: 2023,
-    continent: "Europe"
+    continent: "Europe",
+      extras: [
+     "p066_1.jpg",
+    "p066_2.jpg",
+         ]   
   },
  {
     id: "p067",
     file: "p067.jpg",
     location: "Paris, France",
     year: 2023,
-    continent: "Europe"
+    continent: "Europe",
+      extras: [
+     "p067_1.jpg",
+    "p067_2.jpg",
+    "p067_3.jpg",
+    "p067_4.jpg",
+         ]   
   },
   {
     id: "p068",
