@@ -1024,7 +1024,11 @@ const photos = [
     file: "p087.jpg",
     location: "Chicago, USA",
     year: 2023,
-    continent: "North America"
+    continent: "North America",
+     extras: [
+     "p087_1.jpg",
+    "p087_2.jpg",
+         ]   
   },
  {
     id: "p102",
