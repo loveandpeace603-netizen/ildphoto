@@ -1000,14 +1000,24 @@ const photos = [
     file: "p084.jpg",
     location: "Miami, USA",
     year: 2023,
-    continent: "North America"
+    continent: "North America",
+     extras: [
+     "p084_1.jpg",
+    "p084_2.jpg",
+    "p084_3.jpg",
+    "p084_4.jpg",
+         ]   
   },
   {
     id: "p085",
     file: "p085.jpg",
     location: "Miami, USA",
     year: 2023,
-    continent: "North America"
+    continent: "North America",
+       extras: [
+     "p085_1.jpg",
+    "p085_2.jpg",
+         ]   
   },
  {
     id: "p087",
