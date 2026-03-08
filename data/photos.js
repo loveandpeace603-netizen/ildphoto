@@ -725,6 +725,7 @@ const photos = [
      "p052_1.jpg",
     "p052_2.jpg",
     "p052_3.jpg",
+         ]
   },
   {
     id: "p053",
