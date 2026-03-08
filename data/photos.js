@@ -743,21 +743,38 @@ const photos = [
     file: "p054.jpg",
     location: "Capri, Italy",
     year: 2023,
-    continent: "Europe"
+    continent: "Europe",
+       extras: [
+     "p054_1.jpg",
+    "p054_2.jpg",
+    "p054_3.jpg",
+    "p054_4.jpg",
+         ]
   },
   {
     id: "p055",
     file: "p055.jpg",
-    location: "Rome, Italy",
+    location: "Capri, Italy",
     year: 2023,
-    continent: "Europe"
+    continent: "Europe",
+      extras: [
+     "p055_1.jpg",
+    "p055_2.jpg",
+    "p055_3.jpg",
+    "p055_4.jpg",
+         ]
   },
   {
     id: "p056",
     file: "p056.jpg",
     location: "Rome, Italy",
     year: 2023,
-    continent: "Europe"
+    continent: "Europe",
+       extras: [
+     "p056_1.jpg",
+    "p056_2.jpg",
+    "p056_3.jpg",
+         ]
   },
  {
     id: "p057",
@@ -771,14 +788,22 @@ const photos = [
     file: "p058.jpg",
     location: "Firenze, Italy",
     year: 2023,
-    continent: "Europe"
+    continent: "Europe",
+     extras: [
+     "p058_1.jpg",
+    "p058_2.jpg",
+         ]  
   },
    {
     id: "p059",
     file: "p059.jpg",
     location: "Venice, Italy",
     year: 2023,
-    continent: "Europe"
+    continent: "Europe",
+        extras: [
+     "p059_1.jpg",
+    "p059_2.jpg",
+         ]  
   },
   {
     id: "p060",
