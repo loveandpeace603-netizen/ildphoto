@@ -805,40 +805,68 @@ const photos = [
     "p059_2.jpg",
          ]  
   },
-  {
-    id: "p060",
-    file: "p060.jpg",
-    location: "Luzern, Switzerland",
-    year: 2023,
-    continent: "Europe"
-  },
  {
     id: "p061",
     file: "p061.jpg",
     location: "Luzern, Switzerland",
     year: 2023,
-    continent: "Europe"
+    continent: "Europe",
+    extras: [
+     "p061_1.jpg",
+    "p061_2.jpg",
+    "p061_3.jpg",
+    "p061_4.jpg",
+         ] 
+  },
+ {
+    id: "p060",
+    file: "p060.jpg",
+    location: "Luzern, Switzerland",
+    year: 2023,
+    continent: "Europe",
+     extras: [
+     "p060_1.jpg",
+    "p060_2.jpg",
+    "p060_3.jpg",
+    "p060_4.jpg",
+         ] 
   },
  {
     id: "p062",
     file: "p062.jpg",
     location: "Jungfrau, Switzerland",
     year: 2023,
-    continent: "Europe"
+    continent: "Europe",
+   extras: [
+     "p062_1.jpg",
+    "p062_2.jpg",
+         ]   
   },
   {
     id: "p063",
     file: "p063.jpg",
     location: "Bern, Switzerland",
     year: 2023,
-    continent: "Europe"
+    continent: "Europe",
+     extras: [
+     "p063_1.jpg",
+    "p063_2.jpg",
+    "p063_3.jpg",
+    "p063_4.jpg",
+         ]   
   },
   {
     id: "p064",
     file: "p064.jpg",
     location: "Bern, Switzerland",
     year: 2023,
-    continent: "Europe"
+    continent: "Europe",
+      extras: [
+     "p064_1.jpg",
+    "p064_2.jpg",
+    "p064_3.jpg",
+    "p064_4.jpg",
+         ]   
   },
    {
     id: "p065",
