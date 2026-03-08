@@ -909,35 +909,63 @@ const photos = [
     file: "p068.jpg",
     location: "London, United Kingdom",
     year: 2023,
-    continent: "Europe"
+    continent: "Europe",
+         extras: [
+     "p068_1.jpg",
+    "p068_2.jpg",
+    "p068_3.jpg",
+    "p068_4.jpg",
+         ]   
   },
    {
     id: "p069",
     file: "p069.jpg",
     location: "London, United Kingdom",
     year: 2023,
-    continent: "Europe"
+    continent: "Europe",
+        extras: [
+     "p069_1.jpg",
+    "p069_2.jpg",
+    "p069_3.jpg",
+    "p069_4.jpg",
+         ]   
   },
  {
     id: "p070",
     file: "p070.jpg",
     location: "London, United Kingdom",
     year: 2023,
-    continent: "Europe"
+    continent: "Europe",
+      extras: [
+     "p070_1.jpg",
+    "p070_2.jpg",
+    "p070_3.jpg",
+    "p070_4.jpg",
+         ]   
   },
   {
     id: "p071",
     file: "p071.jpg",
     location: "Bibury, United Kingdom",
     year: 2023,
-    continent: "Europe"
+    continent: "Europe",
+      extras: [
+     "p071_1.jpg",
+    "p071_2.jpg",
+         ]   
   },
   {
     id: "p072",
     file: "p072.jpg",
     location: "Bibury, United Kingdom",
     year: 2023,
-    continent: "Europe"
+    continent: "Europe",
+      extras: [
+     "p072_1.jpg",
+    "p072_2.jpg",
+    "p072_3.jpg",
+    "p072_4.jpg",
+         ]   
   },
  {
     id: "p073",
