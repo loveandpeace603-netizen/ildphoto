@@ -1081,7 +1081,11 @@ const photos = [
     file: "p109.jpg",
     location: "Guam, USA",
     year: 2022,
-    continent: "Oceania"
+    continent: "Oceania",
+       extras: [
+     "p109_1.jpg",
+    "p109_2.jpg",
+         ]   
   },
   {
     id: "p110",
@@ -1095,7 +1099,11 @@ const photos = [
     file: "p111.jpg",
     location: "Guam, USA",
     year: 2022,
-    continent: "Oceania"
+    continent: "Oceania",
+      extras: [
+     "p111_1.jpg",
+    "p111_2.jpg",
+         ]   
   },
   {
     id: "p112",
