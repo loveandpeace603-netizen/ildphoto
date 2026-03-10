@@ -1321,7 +1321,10 @@ const photos = [
     file: "p128.jpg",
     location: "Yufuin, Japan",
     year: 2017,
-    continent: "Asia"
+    continent: "Asia",
+       extras: [
+    "p128_1.jpg",
+  ]
   },
  {
     id: "p170",
