@@ -1412,14 +1412,20 @@ const photos = [
     file: "p152.jpg",
     location: "Mostar, Bosnia and Herzegovina",
     year: 2017,
-    continent: "Europe"
+    continent: "Europe",
+       extras: [
+    "p152_1.jpg",
+  ]
   },
  {
     id: "p154",
     file: "p154.jpg",
     location: "Mostar, Bosnia and Herzegovina",
     year: 2017,
-    continent: "Europe"
+    continent: "Europe",
+     extras: [
+    "p154_1.jpg",
+  ]
   },
   {
     id: "p162",
