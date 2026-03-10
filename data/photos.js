@@ -1419,35 +1419,51 @@ const photos = [
     file: "p159.jpg",
     location: "Bled, Slovenia",
     year: 2017,
-    continent: "Europe"
+    continent: "Europe",
+     extras: [
+    "p159_1.jpg",
+    "p159_2.jpg",
+  ] 
   },
   {
     id: "p158",
     file: "p158.jpg",
     location: "Postojna, Slovenia",
     year: 2017,
-    continent: "Europe"
+    continent: "Europe",
+      extras: [
+    "p158_1.jpg",
+  ]
   },
  {
     id: "p155",
     file: "p155.jpg",
     location: "Ljubljana, Slovenia",
     year: 2017,
-    continent: "Europe"
+    continent: "Europe",
+      extras: [
+    "p155_1.jpg",
+  ]
   },
   {
     id: "p156",
     file: "p156.jpg",
     location: "Ljubljana, Slovenia",
     year: 2017,
-    continent: "Europe"
+    continent: "Europe",
+      extras: [
+    "p156_1.jpg",
+  ]
   },
  {
     id: "p157",
     file: "p157.jpg",
     location: "Ljubljana, Slovenia",
     year: 2017,
-    continent: "Europe"
+    continent: "Europe",
+      extras: [
+    "p157_1.jpg",
+  ]
   },
  {
     id: "p161",
