@@ -2035,7 +2035,11 @@ const photos = [
     file: "p248.jpg",
     location: "Phuket, Thailand",
     year: 2005,
-    continent: "Asia"
+    continent: "Asia",
+     extras: [
+     "p248_1.jpg",
+    "p248_2.jpg",
+  ]  
   },
   {
     id: "p267",
