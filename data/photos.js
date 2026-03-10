@@ -1192,42 +1192,60 @@ const photos = [
     file: "p134.jpg",
     location: "Seville, Spain",
     year: 2019,
-    continent: "Europe"
+    continent: "Europe",
+       extras: [
+     "p134_1.jpg",
+         ]   
   },
  {
     id: "p135",
     file: "p135.jpg",
     location: "Seville, Spain",
     year: 2019,
-    continent: "Europe"
+    continent: "Europe",
+     extras: [
+     "p135_1.jpg",
+         ]   
   },
   {
     id: "p136",
     file: "p136.jpg",
     location: "Toledo, Spain",
     year: 2019,
-    continent: "Europe"
+    continent: "Europe",
+      extras: [
+     "p136_1.jpg",
+         ]   
   },
   {
     id: "p137",
     file: "p137.jpg",
     location: "Granada, Spain",
     year: 2019,
-    continent: "Europe"
+    continent: "Europe",
+      extras: [
+     "p137_1.jpg",
+         ]   
   },
  {
     id: "p138",
     file: "p138.jpg",
     location: "Peníscola, Spain",
     year: 2019,
-    continent: "Europe"
+    continent: "Europe",
+     extras: [
+     "p138_1.jpg",
+         ]   
   },
   {
     id: "p139",
     file: "p139.jpg",
     location: "Ronda, Spain",
     year: 2019,
-    continent: "Europe"
+    continent: "Europe",
+      extras: [
+     "p139_1.jpg",
+         ]   
   },
  {
     id: "p140",
