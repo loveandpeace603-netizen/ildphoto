@@ -1244,21 +1244,30 @@ const photos = [
     file: "p118.jpg",
     location: "Kota Kinabalu, Malaysia",
     year: 2018,
-    continent: "Asia"
+    continent: "Asia",
+      extras: [
+    "p118_1.jpg",
+  ]
   },
    {
     id: "p119",
     file: "p119.jpg",
     location: "Kota Kinabalu, Malaysia",
     year: 2018,
-    continent: "Asia"
+    continent: "Asia",
+       extras: [
+    "p119_1.jpg",
+  ]
   },
  {
     id: "p120",
     file: "p120.jpg",
     location: "Kota Kinabalu, Malaysia",
     year: 2018,
-    continent: "Asia"
+    continent: "Asia",
+     extras: [
+    "p120_1.jpg",
+  ]
   },
  {
     id: "p121",
