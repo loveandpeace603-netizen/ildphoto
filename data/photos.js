@@ -2256,6 +2256,7 @@ const photos = [
       extras: [
     "p280_1.jpg",
  "p280_2.jpg",
+"p280_3.jpg",
   ]
   },
  {
