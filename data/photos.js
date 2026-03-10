@@ -1335,21 +1335,30 @@ const photos = [
     file: "p146.jpg",
     location: "Rovinj, Croatia",
     year: 2017,
-    continent: "Europe"
+    continent: "Europe",
+      extras: [
+    "p146_1.jpg",
+  ]
   },
  {
     id: "p147",
     file: "p147.jpg",
     location: "Zagreb, Croatia",
     year: 2017,
-    continent: "Europe"
+    continent: "Europe",
+     extras: [
+    "p147_1.jpg",
+  ]
   },
   {
     id: "p148",
     file: "p148.jpg",
     location: "Zagreb, Croatia",
     year: 2017,
-    continent: "Europe"
+    continent: "Europe",
+      extras: [
+    "p148_1.jpg",
+  ]
   },
  {
     id: "p149",
@@ -1363,28 +1372,40 @@ const photos = [
     file: "p150.jpg",
     location: "Split, Croatia",
     year: 2017,
-    continent: "Europe"
+    continent: "Europe",
+      extras: [
+    "p150_1.jpg",
+  ]
   },
   {
     id: "p160",
     file: "p160.jpg",
     location: "Plitvicka jezera, Croatia",
     year: 2017,
-    continent: "Europe"
+    continent: "Europe",
+      extras: [
+    "p160_1.jpg",
+  ]
   },
    {
     id: "p151",
     file: "p151.jpg",
     location: "Dubrovnik, Croatia",
     year: 2017,
-    continent: "Europe"
+    continent: "Europe",
+       extras: [
+    "p151_1.jpg",
+  ]
   },
  {
     id: "p153",
     file: "p153.jpg",
     location: "Dubrovnik, Croatia",
     year: 2017,
-    continent: "Europe"
+    continent: "Europe",
+     extras: [
+    "p153_1.jpg",
+  ]
   },
    {
     id: "p152",
