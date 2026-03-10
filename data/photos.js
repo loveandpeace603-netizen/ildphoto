@@ -1265,7 +1265,12 @@ const photos = [
     file: "p121.jpg",
     location: "Xian, China",
     year: 2018,
-    continent: "Asia"
+    continent: "Asia",
+     extras: [
+    "p121_1.jpg",
+   "p121_2.jpg",
+    "p121_3.jpg",
+  ]
   },
  {
     id: "p145",
