@@ -334,7 +334,11 @@ const photos = [
     file: "p075.jpg",
     location: "Ulaanbaatar, Mongolia",
     year: 2025,
-    continent: "Asia"
+    continent: "Asia",
+       extras: [
+     "p075_1.jpg",
+    "p075_2.jpg",
+         ]   
   },
  {
     id: "p076",
