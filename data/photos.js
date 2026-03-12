@@ -2330,7 +2330,10 @@ const photos = [
     file: "p268.jpg",
     location: "New York, USA",
     year: 1995,
-    continent: "North America"
+    continent: "North America",
+        extras: [
+     "p268_1.jpg",
+         ]   
   },
   {
     id: "p273",
@@ -2342,9 +2345,12 @@ const photos = [
     {
     id: "p269",
     file: "p269.jpg",
-    location: "Miami, USA",
+    location: "Key West, USA",
     year: 1995,
-    continent: "North America"
+    continent: "North America",
+         extras: [
+     "p269_1.jpg",
+         ]   
   },
     {
     id: "p274",
@@ -2375,7 +2381,10 @@ const photos = [
     file: "p276.jpg",
     location: "New York, USA",
     year: 1994,
-    continent: "North America"
+    continent: "North America",
+        extras: [
+     "p279_1.jpg",
+         ]   
   },
  {
     id: "p278",
@@ -2389,7 +2398,10 @@ const photos = [
     file: "p279.jpg",
     location: "New York, USA",
     year: 1994,
-    continent: "North America"
+    continent: "North America",
+       extras: [
+     "p276_1.jpg",
+         ]   
   },
   {
     id: "p280",
