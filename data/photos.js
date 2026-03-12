@@ -2147,14 +2147,27 @@ const photos = [
     file: "p244.jpg",
     location: "Hong Kong",
     year: 2009,
-    continent: "Asia"
+    continent: "Asia",
+     extras: [
+     "p244_1.jpg",
+    "p244_2.jpg",
+     "p244_3.jpg",
+  ]  
   },
  {
     id: "p245",
     file: "p245.jpg",
     location: "Macau",
     year: 2009,
-    continent: "Asia"
+    continent: "Asia",
+     extras: [
+     "p245_1.jpg",
+    "p245_2.jpg",
+     "p245_3.jpg",
+     "p245_4.jpg",
+     "p245_5.jpg",
+     "p245_6.jpg",
+  ]  
   },
   {
     id: "p246",
