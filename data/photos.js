@@ -1385,14 +1385,26 @@ const photos = [
     file: "p126.jpg",
     location: "Chiang Mai, Thailand",
     year: 2018,
-    continent: "Asia"
+    continent: "Asia",
+      extras: [
+    "p126_1.jpg",
+     "p126_2.jpg",
+     "p126_3.jpg",
+     "p126_4.jpg",
+  ]
   },
   {
     id: "p127",
     file: "p127.jpg",
     location: "Chiang Mai, Thailand",
     year: 2018,
-    continent: "Asia"
+    continent: "Asia",
+       extras: [
+    "p127_1.jpg",
+     "p127_2.jpg",
+     "p127_3.jpg",
+     "p127_4.jpg",
+  ]
   },
    {
     id: "p128",
