@@ -1252,14 +1252,21 @@ const photos = [
     file: "p140.jpg",
     location: "Porto, Portugal",
     year: 2019,
-    continent: "Europe"
+    continent: "Europe",
+       extras: [
+     "p140_1.jpg",
+     "p140_2.jpg",
+         ]   
   },
  {
     id: "p141",
     file: "p141.jpg",
     location: "Fatima, Portugal",
     year: 2019,
-    continent: "Europe"
+    continent: "Europe",
+       extras: [
+     "p141_1.jpg",
+         ]   
   },
   {
     id: "p232",
