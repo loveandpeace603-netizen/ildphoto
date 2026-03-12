@@ -1117,21 +1117,32 @@ const photos = [
     file: "p116.jpg",
     location: "Ho Chi Minh, Viet Nam",
     year: 2019,
-    continent: "Asia"
+    continent: "Asia",
+      extras: [
+     "p116_1.jpg",
+    "p116_2.jpg",
+         ]   
   },
  {
     id: "p115",
     file: "p115.jpg",
     location: "Nha Trang, Viet Nam",
     year: 2019,
-    continent: "Asia"
+    continent: "Asia",
+      extras: [
+     "p115_1.jpg",
+    "p115_2.jpg",
+         ]   
   },
  {
     id: "p117",
     file: "p117.jpg",
     location: "Nha Trang, Viet Nam",
     year: 2019,
-    continent: "Asia"
+    continent: "Asia",
+      extras: [
+     "p117_1.jpg",
+         ]   
   },
   {
     id: "p114",
