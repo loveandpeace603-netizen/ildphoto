@@ -1600,14 +1600,25 @@ const photos = [
     file: "p129.jpg",
     location: "Bangkok, Thailand",
     year: 2016,
-    continent: "Asia"
+    continent: "Asia",
+       extras: [
+     "p129_1.jpg",
+    "p129_2.jpg",
+    "p129_3.jpg",
+    "p129_4.jpg",
+    "p129_5.jpg",
+         ]   
   },
  {
     id: "p130",
     file: "p130.jpg",
     location: "Hua Hin, Thailand",
     year: 2016,
-    continent: "Asia"
+    continent: "Asia",
+       extras: [
+     "p130_1.jpg",
+    "p130_2.jpg",
+         ]   
   },
  {
     id: "p142",
