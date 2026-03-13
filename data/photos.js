@@ -1936,35 +1936,51 @@ const photos = [
     file: "p194.jpg",
     location: "Melbourne, Australia",
     year: 2014,
-    continent: "Oceania"
+    continent: "Oceania",
+      extras: [
+     "p194_1.jpg",
+         ]  
   },
  {
     id: "p198",
     file: "p198.jpg",
     location: "Melbourne, Australia",
     year: 2014,
-    continent: "Oceania"
+    continent: "Oceania",
+      extras: [
+     "p198_1.jpg",
+         ]  
   },
    {
     id: "p195",
     file: "p195.jpg",
     location: "Melbourne, Australia",
     year: 2014,
-    continent: "Oceania"
+    continent: "Oceania",
+        extras: [
+     "p195_1.jpg",
+         ]  
   },
    {
     id: "p196",
     file: "p196.jpg",
     location: "Melbourne, Australia",
     year: 2014,
-    continent: "Oceania"
+    continent: "Oceania",
+        extras: [
+     "p196_1.jpg",
+         ]  
   },
     {
     id: "p197",
     file: "p197.jpg",
     location: "Princetown, Australia",
     year: 2014,
-    continent: "Oceania"
+    continent: "Oceania",
+         extras: [
+     "p197_1.jpg",
+      "p197_2.jpg",
+         ]  
   },
     {
     id: "p200",
