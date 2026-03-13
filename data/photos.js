@@ -1696,7 +1696,6 @@ const photos = [
     year: 2015,
     continent: "Asia",
       extras: [
-     "p169_1.jpg",
     "p169_2.jpg",
      "p169_3.jpg",
          ]   
@@ -1743,28 +1742,48 @@ const photos = [
     file: "p175.jpg",
     location: "New Taipei City, Taiwan",
     year: 2015,
-    continent: "Asia"
+    continent: "Asia",
+      extras: [
+     "p175_1.jpg",
+    "p175_2.jpg",
+     "p175_3.jpg",
+    "p175_4.jpg",
+         ]   
   },
  {
     id: "p176",
     file: "p176.jpg",
     location: "Jiufen, Taiwan",
     year: 2015,
-    continent: "Asia"
+    continent: "Asia",
+     extras: [
+     "p176_1.jpg",
+    "p176_2.jpg",
+         ]   
   },
  {
     id: "p177",
     file: "p177.jpg",
     location: "Taipei, Taiwan",
     year: 2015,
-    continent: "Asia"
+    continent: "Asia",
+        extras: [
+     "p177_1.jpg",
+    "p177_2.jpg",
+     "p177_3.jpg",
+    "p177_4.jpg",
+         ]  
   },
   {
     id: "p178",
     file: "p178.jpg",
     location: "Taipei, Taiwan",
     year: 2015,
-    continent: "Asia"
+    continent: "Asia",
+         extras: [
+     "p178_1.jpg",
+    "p178_2.jpg",
+         ]  
   },
  {
     id: "p185",
