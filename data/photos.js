@@ -1625,21 +1625,34 @@ const photos = [
     file: "p142.jpg",
     location: "Singapore, Singapore",
     year: 2016,
-    continent: "Asia"
+    continent: "Asia",
+     extras: [
+     "p142_1.jpg",
+    "p142_2.jpg",
+         ]   
   },
   {
     id: "p143",
     file: "p143.jpg",
     location: "Singapore, Singapore",
     year: 2016,
-    continent: "Asia"
+    continent: "Asia",
+      extras: [
+     "p143_1.jpg",
+    "p143_2.jpg",
+     "p143_3.jpg",
+         ]   
   },
  {
     id: "p144",
     file: "p144.jpg",
     location: "Singapore, Singapore",
     year: 2016,
-    continent: "Asia"
+    continent: "Asia",
+      extras: [
+     "p144_1.jpg",
+    "p144_2.jpg",
+         ]   
   },
  {
     id: "p168",
