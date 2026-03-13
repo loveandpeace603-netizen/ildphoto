@@ -1859,49 +1859,77 @@ const photos = [
     file: "p187.jpg",
     location: "Hononlulu, USA",
     year: 2014,
-    continent: "North America"
+    continent: "North America",
+        extras: [
+     "p187_1.jpg",
+    "p187_2.jpg",
+         ]  
   },
    {
     id: "p188",
     file: "p188.jpg",
     location: "Hononlulu, USA",
     year: 2014,
-    continent: "North America"
+    continent: "North America",
+       extras: [
+     "p188_1.jpg",
+    "p188_2.jpg",
+         ]  
   },
   {
     id: "p189",
     file: "p189.jpg",
     location: "Wahiawa, USA",
     year: 2014,
-    continent: "North America"
+    continent: "North America",
+      extras: [
+     "p189_1.jpg",
+    "p189_2.jpg",
+         ]  
   },
   {
     id: "p190",
     file: "p190.jpg",
     location: "Kāneʻohe, USA",
     year: 2014,
-    continent: "North America"
+    continent: "North America",
+      extras: [
+     "p190_1.jpg",
+    "p190_2.jpg",
+         ]  
   },
    {
     id: "p191",
     file: "p191.jpg",
     location: "Waialua, USA",
     year: 2014,
-    continent: "North America"
+    continent: "North America",
+       extras: [
+     "p191_1.jpg",
+    "p191_2.jpg",
+         ]  
   },
    {
     id: "p192",
     file: "p192.jpg",
     location: "Maui, USA",
     year: 2014,
-    continent: "North America"
+    continent: "North America",
+       extras: [
+     "p192_1.jpg",
+    "p192_2.jpg",
+         ]  
   },
     {
     id: "p193",
     file: "p193.jpg",
     location: "Waikiki, USA",
     year: 2014,
-    continent: "North America"
+    continent: "North America",
+        extras: [
+     "p193_1.jpg",
+    "p193_2.jpg",
+         ]  
   },
   {
     id: "p194",
