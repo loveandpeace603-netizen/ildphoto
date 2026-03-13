@@ -1694,28 +1694,49 @@ const photos = [
     file: "p169.jpg",
     location: "Sapporo, Japan",
     year: 2015,
-    continent: "Asia"
+    continent: "Asia",
+      extras: [
+     "p169_1.jpg",
+    "p169_2.jpg",
+     "p169_3.jpg",
+         ]   
   },
   {
     id: "p171",
     file: "p171.jpg",
     location: "Sapporo, Japan",
     year: 2015,
-    continent: "Asia"
+    continent: "Asia",
+       extras: [
+     "p171_1.jpg",
+    "p171_2.jpg",
+         ]   
   },
    {
     id: "p172",
     file: "p172.jpg",
     location: "Sapporo, Japan",
     year: 2015,
-    continent: "Asia"
+    continent: "Asia",
+        extras: [
+     "p172_1.jpg",
+    "p172_2.jpg",
+     "p172_3.jpg",
+    "p172_4.jpg",
+         ]   
   },
  {
     id: "p173",
     file: "p173.jpg",
     location: "Otaru, Japan",
     year: 2015,
-    continent: "Asia"
+    continent: "Asia",
+     extras: [
+     "p173_1.jpg",
+    "p173_2.jpg",
+     "p173_3.jpg",
+    "p173_4.jpg",
+         ]   
   },
   {
     id: "p175",
