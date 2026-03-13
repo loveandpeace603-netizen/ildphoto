@@ -2187,56 +2187,89 @@ const photos = [
     file: "p235.jpg",
     location: "Tokyo, Japan",
     year: 2010,
-    continent: "Asia"
+    continent: "Asia",
+       extras: [
+     "p235_1.jpg",
+    "p235_2.jpg",
+  ]  
   },
   {
     id: "p236",
     file: "p236.jpg",
     location: "Tokyo, Japan",
     year: 2010,
-    continent: "Asia"
+    continent: "Asia",
+       extras: [
+     "p236_1.jpg",
+    "p236_2.jpg",
+  ]  
   },
  {
     id: "p237",
     file: "p237.jpg",
     location: "Tokyo, Japan",
     year: 2010,
-    continent: "Asia"
+    continent: "Asia",
+     extras: [
+     "p237_1.jpg",
+    "p237_2.jpg",
+  ]  
   },
  {
     id: "p256",
     file: "p256.jpg",
     location: "Tokyo, Japan",
     year: 2010,
-    continent: "Asia"
+    continent: "Asia",
+     extras: [
+     "p256_1.jpg",
+    "p256_2.jpg",
+  ]  
   },
   {
     id: "p238",
     file: "p238.jpg",
     location: "Tokyo, Japan",
     year: 2010,
-    continent: "Asia"
+    continent: "Asia",
+      extras: [
+     "p238_1.jpg",
+    "p238_2.jpg",
+    "p238_3.jpg",
+  ]  
   },
    {
     id: "p239",
     file: "p239.jpg",
     location: "Tokyo, Japan",
     year: 2010,
-    continent: "Asia"
+    continent: "Asia",
+    extras: [
+     "p239_1.jpg",
+    "p239_2.jpg",
+  ]     
   },
     {
     id: "p242",
     file: "p242.jpg",
     location: "Matsumoto, Japan",
     year: 2010,
-    continent: "Asia"
+    continent: "Asia",
+    extras: [
+     "p242_1.jpg",
+    "p242_2.jpg",
+  ]  
   },
  {
     id: "p243",
     file: "p243.jpg",
     location: "Yokohama, Japan",
     year: 2010,
-    continent: "Asia"
+    continent: "Asia",
+     extras: [
+     "p243_1.jpg",
+    "p243_2.jpg",
+  ]  
   },
  {
     id: "p244",
