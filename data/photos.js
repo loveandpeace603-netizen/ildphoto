@@ -1825,21 +1825,34 @@ const photos = [
     file: "p182.jpg",
     location: "Osaka, Japan",
     year: 2015,
-    continent: "Asia"
+    continent: "Asia",
+    extras: [
+     "p182_1.jpg",
+    "p182_2.jpg",
+         ]   
   },
  {
     id: "p183",
     file: "p183.jpg",
     location: "Osaka, Japan",
     year: 2015,
-    continent: "Asia"
+    continent: "Asia",
+      extras: [
+     "p183_1.jpg",
+    "p183_2.jpg",
+    "p183_3.jpg",
+         ]  
   },
  {
     id: "p181",
     file: "p181.jpg",
     location: "Osaka, Japan",
     year: 2015,
-    continent: "Asia"
+    continent: "Asia",
+      extras: [
+     "p181_1.jpg",
+    "p181_2.jpg",
+         ]  
   },
   {
     id: "p187",
