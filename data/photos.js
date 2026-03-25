@@ -1439,6 +1439,7 @@ const photos = [
     continent: "Asia",
        extras: [
     "p128_1.jpg",
+     "p128_2.jpg",
   ]
   },
  {
@@ -1446,7 +1447,11 @@ const photos = [
     file: "p170.jpg",
     location: "Beppu, Japan",
     year: 2017,
-    continent: "Asia"
+    continent: "Asia",
+     extras: [
+    "p170_1.jpg",
+    "p170_2.jpg",
+  ]
   },
  {
     id: "p146",
