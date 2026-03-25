@@ -308,14 +308,20 @@ const photos = [
     file: "p097.jpg",
     location: "Sapporo, Japan",
     year: 2025,
-    continent: "Asia"
+    continent: "Asia",
+    extras: [
+    "p097_1.jpg",
+  ] 
   },
  {
     id: "p024",
     file: "p024.jpg",
     location: "Sapporo, Japan",
     year: 2025,
-    continent: "Asia"
+    continent: "Asia",
+      extras: [
+    "p024_1.jpg",
+  ] 
   },
  {
     id: "p077",
