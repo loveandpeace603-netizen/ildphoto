@@ -715,7 +715,10 @@ const photos = [
     file: "p074.jpg",
     location: "Chiang Mai, Thailand",
     year: 2023,
-    continent: "Asia"
+    continent: "Asia",
+    extras: [
+     "p074_1.jpg",
+  ] 
   },
   {
     id: "p051",
@@ -986,21 +989,33 @@ const photos = [
     file: "p073.jpg",
     location: "Chiang Mai, Thailand",
     year: 2023,
-    continent: "Asia"
+    continent: "Asia",
+     extras: [
+     "p073_1.jpg",
+    "p073_2.jpg",
+  ]
   },
   {
     id: "p080",
     file: "p080.jpg",
     location: "Chiang Mai, Thailand",
     year: 2023,
-    continent: "Asia"
+    continent: "Asia",
+      extras: [
+     "p080_1.jpg",
+    "p080_2.jpg",
+  ]
   },
   {
     id: "p002",
     file: "p002.jpg",
     location: "Chiang Mai, Thailand",
     year: 2023,
-    continent: "Asia"
+    continent: "Asia",
+      extras: [
+     "p002_1.jpg",
+    "p002_2.jpg",
+  ]
   },
    {
     id: "p105",
