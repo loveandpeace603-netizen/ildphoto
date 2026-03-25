@@ -311,6 +311,7 @@ const photos = [
     continent: "Asia",
     extras: [
     "p097_1.jpg",
+ "p097_2.jpg",
   ] 
   },
  {
@@ -2104,7 +2105,10 @@ const photos = [
     file: "p207.jpg",
     location: "Shenzhen, China",
     year: 2013,
-    continent: "Asia"
+    continent: "Asia",
+    extras: [
+     "p207_1.jpg",
+         ]    
   },
   {
     id: "p214",
