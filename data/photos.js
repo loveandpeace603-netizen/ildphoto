@@ -40,6 +40,18 @@ const photos = [
     location: "Laguna, USA",
     year: 2026,
     continent: "North America",
+     extras: [
+     "p324_1.jpg",
+    "p324_2.jpg",
+      "p324_3.jpg",
+     "p324_4.jpg",
+    "p324_5.jpg",
+   "p324_6.jpg",
+    "p324_7.jpg",
+    "p324_8.jpg",
+    "p324_9.jpg",
+    "p324_10.jpg",
+  ]
   },
     {
     id: "p323",
