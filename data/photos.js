@@ -47,6 +47,16 @@ const photos = [
     location: "Los Angeles, USA",
     year: 2026,
     continent: "North America",
+          extras: [
+     "p323_1.jpg",
+    "p323_2.jpg",
+      "p323_3.jpg",
+     "p323_4.jpg",
+    "p323_5.jpg",
+   "p323_6.jpg",
+    "p323_7.jpg",
+    "p323_8.jpg",
+  ]
   },
     {
     id: "p285",
