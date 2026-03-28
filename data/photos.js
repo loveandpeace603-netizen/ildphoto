@@ -12,6 +12,13 @@ const photos = [
     location: "La Jolla, USA",
     year: 2026,
     continent: "North America",
+     extras: [
+     "p328_1.jpg",
+    "p328_2.jpg",
+      "p328_3.jpg",
+     "p328_4.jpg",
+    "p328_5.jpg",
+  ]
   },
     {
     id: "p327",
