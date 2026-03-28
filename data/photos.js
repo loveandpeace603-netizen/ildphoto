@@ -26,6 +26,12 @@ const photos = [
     location: "Orange County, USA",
     year: 2026,
     continent: "North America",
+    extras: [
+     "p326_1.jpg",
+    "p326_2.jpg",
+      "p326_3.jpg",
+     "p326_4.jpg",
+  ]
   },
     {
     id: "p325",
