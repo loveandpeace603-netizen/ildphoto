@@ -1805,35 +1805,52 @@ const photos = [
     file: "p168.jpg",
     location: "Da Nang, Viet Nam",
     year: 2016,
-    continent: "Asia"
+    continent: "Asia",
+      extras: [
+     "p168_1.jpg",
+    "p168_2.jpg",
+         ]   
   },
   {
     id: "p164",
     file: "p164.jpg",
     location: "Da Nang, Viet Nam",
     year: 2016,
-    continent: "Asia"
+    continent: "Asia",
+         extras: [
+     "p164_1.jpg",
+    "p164_2.jpg",
+         ]   
   },
  {
     id: "p165",
     file: "p165.jpg",
     location: "Hoi An, Viet Nam",
     year: 2016,
-    continent: "Asia"
+    continent: "Asia",
+        extras: [
+     "p165_1.jpg",
+         ]   
   },
  {
     id: "p167",
     file: "p167.jpg",
     location: "Hoi An, Viet Nam",
     year: 2016,
-    continent: "Asia"
+    continent: "Asia",
+        extras: [
+     "p167_1.jpg",
+         ]   
   },
  {
     id: "p166",
     file: "p166.jpg",
     location: "Ha Noi, Viet Nam",
     year: 2016,
-    continent: "Asia"
+    continent: "Asia",
+        extras: [
+     "p166_1.jpg",
+         ]   
   },
  {
     id: "p169",
