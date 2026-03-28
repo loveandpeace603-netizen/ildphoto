@@ -2248,7 +2248,10 @@ const photos = [
     file: "p210.jpg",
     location: "Grand Canyon Village, USA",
     year: 2012,
-    continent: "North America"
+    continent: "North America",
+         extras: [
+     "p210_1.jpg",
+         ]   
   },
     {
     id: "p212",
@@ -2256,7 +2259,7 @@ const photos = [
     location: "Las Vegas, USA",
     year: 2012,
     continent: "North America",
-         extras: [
+      extras: [
      "p212_1.jpg",
          ]   
   },
@@ -2265,7 +2268,10 @@ const photos = [
     file: "p213.jpg",
     location: "Las Vegas, USA",
     year: 2012,
-    continent: "North America"
+    continent: "North America",
+     extras: [
+     "p213_1.jpg",
+         ]   
   },
     {
     id: "p221",
