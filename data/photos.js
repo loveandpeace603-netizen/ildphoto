@@ -5,6 +5,15 @@ const photos = [
     location: "San Diego, USA",
     year: 2026,
     continent: "North America",
+    extras: [
+     "p329_1.jpg",
+    "p329_2.jpg",
+      "p329_3.jpg",
+     "p329_4.jpg",
+    "p329_5.jpg",
+   "p329_6.jpg",
+    "p329_7.jpg",
+  ]
   },
     {
     id: "p328",
