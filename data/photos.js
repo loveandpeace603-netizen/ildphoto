@@ -2627,13 +2627,6 @@ const photos = [
     year: 2001,
     continent: "Asia"
   },
-    {
-    id: "p254",
-    file: "p254.jpg",
-    location: "Hong Kong",
-    year: 2001,
-    continent: "Asia"
-  },
   {
     id: "p257",
     file: "p257.jpg",
@@ -2665,6 +2658,16 @@ const photos = [
     "p258_2.jpg",
          ]   
   },
+{
+    id: "p254",
+    file: "p254.jpg",
+    location: "Hong Kong",
+    year: 1999,
+    continent: "Asia",
+    extras: [
+     "p254_1.jpg",
+         ]   
+  },
   {
     id: "p259",
     file: "p259.jpg",
@@ -2691,7 +2694,10 @@ const photos = [
     file: "p260.jpg",
     location: "Hong Kong",
     year: 1997,
-    continent: "Asia"
+    continent: "Asia",
+    extras: [
+     "p260_1.jpg",
+         ]   
   },
   {
     id: "p261",
@@ -2705,7 +2711,10 @@ const photos = [
     file: "p264.jpg",
     location: "Singapore, Singapore",
     year: 1997,
-    continent: "Asia"
+    continent: "Asia",
+    extras: [
+     "p264_1.jpg",
+         ]   
   },
     {
     id: "p265",
