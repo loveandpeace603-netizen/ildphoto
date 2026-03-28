@@ -2299,7 +2299,10 @@ const photos = [
     file: "p222.jpg",
     location: "San Diego, USA",
     year: 2012,
-    continent: "North America"
+    continent: "North America",
+         extras: [
+     "p222_1.jpg",
+         ]   
   },
     {
     id: "p223",
@@ -2313,21 +2316,27 @@ const photos = [
     file: "p224.jpg",
     location: "Los Angeles, USA",
     year: 2012,
-    continent: "North America"
+    continent: "North America",
+       extras: [
+     "p224_1.jpg",
+         ]   
   },
   {
     id: "p225",
     file: "p225.jpg",
     location: "Los Angeles, USA",
     year: 2012,
-    continent: "North America"
+    continent: "North America",
   },
     {
     id: "p227",
     file: "p227.jpg",
     location: "Los Angeles, USA",
     year: 2012,
-    continent: "North America"
+    continent: "North America",
+       extras: [
+     "p225_1.jpg",
+         ]   
   },
    {
     id: "p226",
@@ -2348,7 +2357,10 @@ const photos = [
     file: "p229.jpg",
     location: "Los Angeles, USA",
     year: 2012,
-    continent: "North America"
+    continent: "North America",
+          extras: [
+     "p229_1.jpg",
+         ]   
   },
  {
     id: "p230",
