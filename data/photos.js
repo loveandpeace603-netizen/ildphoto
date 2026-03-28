@@ -2653,7 +2653,11 @@ const photos = [
     file: "p258.jpg",
     location: "El Nido, Philippines",
     year: 2000,
-    continent: "Oceania"
+    continent: "Asia",
+      extras: [
+     "p258_1.jpg",
+    "p258_2.jpg",
+         ]   
   },
   {
     id: "p259",
