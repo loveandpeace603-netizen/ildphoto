@@ -2644,9 +2644,15 @@ const photos = [
  {
     id: "p255",
     file: "p255.jpg",
-    location: "Brisbane, Australia",
+    location: "Sydney, Australia",
     year: 2000,
-    continent: "Oceania"
+    continent: "Oceania",
+      extras: [
+     "p255_1.jpg",
+    "p255_2.jpg",
+     "p255_3.jpg",
+    "p255_4.jpg",
+         ]   
   },
  {
     id: "p258",
