@@ -2162,7 +2162,10 @@ const photos = [
     file: "p200.jpg",
     location: "Sydney, Australia",
     year: 2013,
-    continent: "Oceania"
+    continent: "Oceania",
+     extras: [
+     "p200_1.jpg",
+         ]     
   },
  {
     id: "p199",
