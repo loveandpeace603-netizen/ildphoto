@@ -1142,6 +1142,7 @@ const photos = [
      extras: [
      "p105_1.jpg",
      "p105_2.jpg",
+         ]  
   },
  {
     id: "p084",
