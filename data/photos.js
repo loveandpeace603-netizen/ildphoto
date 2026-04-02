@@ -1209,14 +1209,22 @@ const photos = [
     file: "p106.jpg",
     location: "Chicago, USA",
     year: 2022,
-    continent: "North America"
+    continent: "North America",
+      extras: [
+     "p106_1.jpg",
+    "p106_2.jpg",
+         ]   
   },
  {
     id: "p107",
     file: "p107.jpg",
     location: "Chicago, USA",
     year: 2022,
-    continent: "North America"
+    continent: "North America",
+      extras: [
+     "p107_1.jpg",
+    "p107_2.jpg",
+         ]   
   },
   {
     id: "p108",
