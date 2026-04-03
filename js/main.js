@@ -209,3 +209,76 @@ window.addEventListener("scroll", () => {
 
   applyAndRender({ restoreScroll: true });
 })();
+
+/* =========================
+   MOBILE SWIPE FOR DETAIL PAGE
+   ========================= */
+
+(function () {
+  const detailArea =
+    document.querySelector(".detail-scroll") ||
+    document.querySelector(".detail-center") ||
+    document.querySelector(".detail-page");
+
+  const prevBtn = document.querySelector(".nav-prev");
+  const nextBtn = document.querySelector(".nav-next");
+
+  if (!detailArea || (!prevBtn && !nextBtn)) return;
+
+  let startX = 0;
+  let startY = 0;
+  let deltaX = 0;
+  let deltaY = 0;
+  let isTouching = false;
+
+  const SWIPE_THRESHOLD = 50;   // 최소 이동 거리
+  const VERTICAL_LIMIT = 35;    // 세로로 너무 많이 움직이면 무시
+
+  detailArea.addEventListener(
+    "touchstart",
+    (e) => {
+      if (!e.touches || e.touches.length !== 1) return;
+
+      isTouching = true;
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+      deltaX = 0;
+      deltaY = 0;
+    },
+    { passive: true }
+  );
+
+  detailArea.addEventListener(
+    "touchmove",
+    (e) => {
+      if (!isTouching || !e.touches || e.touches.length !== 1) return;
+
+      deltaX = e.touches[0].clientX - startX;
+      deltaY = e.touches[0].clientY - startY;
+    },
+    { passive: true }
+  );
+
+  detailArea.addEventListener(
+    "touchend",
+    () => {
+      if (!isTouching) return;
+      isTouching = false;
+
+      // 세로 스크롤 동작이면 무시
+      if (Math.abs(deltaY) > VERTICAL_LIMIT) return;
+
+      // 오른쪽으로 밀기 = 이전
+      if (deltaX > SWIPE_THRESHOLD && prevBtn) {
+        prevBtn.click();
+        return;
+      }
+
+      // 왼쪽으로 밀기 = 다음
+      if (deltaX < -SWIPE_THRESHOLD && nextBtn) {
+        nextBtn.click();
+      }
+    },
+    { passive: true }
+  );
+})();
