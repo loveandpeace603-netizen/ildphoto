@@ -604,3 +604,11 @@ body {
     display: block;
   }
 }
+
+@media (max-width: 768px) {
+  .detail-scroll,
+  .detail-center,
+  .detail-page {
+    touch-action: pan-y;
+  }
+}
