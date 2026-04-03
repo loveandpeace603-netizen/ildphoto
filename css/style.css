@@ -433,3 +433,198 @@ body {
   .nav-arrow { font-size: 40px; }
   .nav-back { font-size: 24px; }
 }
+
+/* =========================
+   MOBILE OVERRIDE ONLY
+   PC version untouched
+   ========================= */
+@media (max-width: 768px) {
+  /* ===== BASE ===== */
+  body {
+    padding: 12px;
+  }
+
+  /* ===== TOPBAR ===== */
+  .topbar {
+    gap: 10px;
+    margin-bottom: 12px;
+    align-items: center;
+  }
+
+  .menu-btn {
+    padding: 9px 12px;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+
+  .tagline {
+    font-size: 12px;
+    line-height: 1.4;
+    color: #666;
+  }
+
+  /* ===== ARCHIVE GRID ===== */
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .grid img {
+    border-radius: 12px;
+  }
+
+  .thumb {
+    overflow: hidden;
+    border-radius: 12px;
+  }
+
+  /* ===== PANEL / FILTER ===== */
+  .panel {
+    width: 86vw;
+    max-width: 320px;
+    padding: 16px;
+    border-right: none;
+    box-shadow: 8px 0 30px rgba(0, 0, 0, 0.08);
+  }
+
+  .panel-head {
+    margin-bottom: 12px;
+  }
+
+  .panel-title,
+  .panel-label {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+  }
+
+  .panel-section {
+    margin-top: 14px;
+  }
+
+  .panel-list {
+    gap: 6px;
+  }
+
+  .chip {
+    padding: 7px 10px;
+    font-size: 12px;
+  }
+
+  .reset-btn {
+    padding: 11px;
+    border-radius: 10px;
+  }
+
+  /* ===== DETAIL PAGE ===== */
+  .detail-scroll {
+    padding: 12px 12px 20px;
+  }
+
+  .detail-hero {
+    min-height: auto;
+    padding-top: 52px;
+    padding-bottom: 18px;
+  }
+
+  .detail-scroll .detail-stage {
+    max-width: 100%;
+    gap: 10px;
+  }
+
+  .detail-scroll .detail-image {
+    width: 100%;
+    max-width: 100%;
+    max-height: 56vh;
+    border-radius: 14px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .detail-scroll .detail-meta {
+    margin-top: 12px;
+    font-size: 16px;
+    line-height: 1.35;
+    text-align: center;
+  }
+
+  .meta-location {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .meta-year {
+    margin-top: 4px;
+    font-size: 13px;
+    color: #777;
+  }
+
+  .detail-hint {
+    position: static;
+    transform: none;
+    margin-top: 10px;
+    font-size: 11px;
+    line-height: 1.4;
+    animation: none;
+  }
+
+  /* ===== DETAIL NAV ===== */
+  .nav-back {
+    top: 12px;
+    left: 12px;
+    font-size: 20px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    opacity: 1;
+  }
+
+  .nav-arrow {
+    top: auto;
+    bottom: 14px;
+    transform: none;
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    font-size: 24px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.86);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    opacity: 0.95;
+    line-height: 1;
+  }
+
+  .nav-prev {
+    left: 12px;
+  }
+
+  .nav-next {
+    right: 12px;
+  }
+
+  /* ===== EXTRAS ===== */
+  .extras {
+    margin-top: 10px;
+    padding-bottom: 24px;
+  }
+
+  .extras-title {
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+
+  .extras-grid {
+    column-count: 1;
+    column-width: auto;
+    column-gap: 0;
+  }
+
+  .extras-grid img {
+    border-radius: 12px;
+    margin-bottom: 10px;
+  }
+}
