@@ -78,11 +78,7 @@ function goNext() {
 }
 
 function goBack() {
-  if (window.history.length > 1) {
-    window.history.back();
-  } else {
-    window.location.href = "index.html";
-  }
+  window.location.href = "index.html";
 }
 
 /* nav button setup */
