@@ -8,6 +8,7 @@ const overlay = document.getElementById("overlay");
 const resetBtn = document.getElementById("resetBtn");
 
 const STORAGE_KEY = "ild_view";
+const MOBILE_QUERY = window.matchMedia("(max-width: 768px)");
 
 // 원래 입력 순서(photos.js에서 위에 있을수록 최신) 기억
 const originalIndex = new Map(photos.map((p, i) => [p.id, i]));
@@ -20,6 +21,18 @@ const state = {
 };
 
 // ---------- helpers ----------
+function isMobile() {
+  return MOBILE_QUERY.matches;
+}
+
+function lockBodyScroll() {
+  document.body.style.overflow = "hidden";
+}
+
+function unlockBodyScroll() {
+  document.body.style.overflow = "";
+}
+
 function decadeFromYear(year) {
   if (year >= 2020) return "2020s";
   if (year >= 2010) return "2010s";
@@ -29,21 +42,29 @@ function decadeFromYear(year) {
 }
 
 function openPanel() {
+  if (!panel) return;
+
   panel.classList.add("is-open");
   panel.setAttribute("aria-hidden", "false");
-  overlay.hidden = false;
+
+  if (overlay) overlay.hidden = false;
+  if (isMobile()) lockBodyScroll();
 }
 
 function closePanel() {
+  if (!panel) return;
+
   panel.classList.remove("is-open");
   panel.setAttribute("aria-hidden", "true");
-  overlay.hidden = true;
+
+  if (overlay) overlay.hidden = true;
+  unlockBodyScroll();
 }
 
 function saveView(items) {
   const payload = {
     state: { ...state },
-    ids: items.map(p => p.id),
+    ids: items.map((p) => p.id),
     scrollY: window.scrollY
   };
   sessionStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
@@ -60,9 +81,15 @@ function loadView() {
 }
 
 function setActiveChip(attr, value) {
-  document.querySelectorAll(`.chip[${attr}]`).forEach(b => b.classList.remove("active"));
-  // CSS.escape는 대부분 지원되지만 혹시 몰라 안전 처리
-  const safe = (window.CSS && CSS.escape) ? CSS.escape(value) : value.replace(/"/g, '\\"');
+  document
+    .querySelectorAll(`.chip[${attr}]`)
+    .forEach((b) => b.classList.remove("active"));
+
+  const safe =
+    window.CSS && CSS.escape
+      ? CSS.escape(value)
+      : value.replace(/"/g, '\\"');
+
   const btn = document.querySelector(`.chip[${attr}="${safe}"]`);
   if (btn) btn.classList.add("active");
 }
@@ -73,15 +100,24 @@ function getFilteredItems() {
 
   // YEAR: gifted / decade
   if (state.year === "gifted") {
-    items = items.filter(p => p.gifted === true || p.year === null || p.year === undefined);
+    items = items.filter(
+      (p) => p.gifted === true || p.year === null || p.year === undefined
+    );
   } else if (state.year !== "all") {
-    items = items.filter(p => p.year !== null && p.year !== undefined && decadeFromYear(p.year) === state.year);
+    items = items.filter(
+      (p) =>
+        p.year !== null &&
+        p.year !== undefined &&
+        decadeFromYear(p.year) === state.year
+    );
   }
 
   // PLACE: continent (string or array)
   if (state.place !== "all") {
-    items = items.filter(p =>
-      Array.isArray(p.continent) ? p.continent.includes(state.place) : p.continent === state.place
+    items = items.filter((p) =>
+      Array.isArray(p.continent)
+        ? p.continent.includes(state.place)
+        : p.continent === state.place
     );
   }
 
@@ -90,8 +126,8 @@ function getFilteredItems() {
     const ay = a.year;
     const by = b.year;
 
-    const aUnknown = (ay === null || ay === undefined);
-    const bUnknown = (by === null || by === undefined);
+    const aUnknown = ay === null || ay === undefined;
+    const bUnknown = by === null || by === undefined;
 
     if (aUnknown && !bUnknown) return 1;
     if (!aUnknown && bUnknown) return -1;
@@ -114,6 +150,8 @@ function getFilteredItems() {
 }
 
 function render(items) {
+  if (!gallery) return;
+
   gallery.innerHTML = "";
 
   items.forEach((photo) => {
@@ -121,7 +159,7 @@ function render(items) {
     link.href = `./photo.html?id=${photo.id}`;
     link.className = "thumb";
 
-    // ✅ 디테일에서 "현재 목록 기준 prev/next + back 복귀"를 위해 저장
+    // 디테일에서 "현재 목록 기준 prev/next + back 복귀"를 위해 저장
     link.addEventListener("click", () => {
       saveView(items);
     });
@@ -130,6 +168,7 @@ function render(items) {
     img.src = `./images/thumbs/${photo.file}`;
     img.alt = `${photo.location}${photo.year ? `, ${photo.year}` : ""}`;
     img.loading = "lazy";
+    img.decoding = "async";
 
     link.appendChild(img);
     gallery.appendChild(link);
@@ -153,6 +192,10 @@ menuBtn?.addEventListener("click", openPanel);
 closeBtn?.addEventListener("click", closePanel);
 overlay?.addEventListener("click", closePanel);
 
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closePanel();
+});
+
 document.querySelectorAll(".chip").forEach((btn) => {
   btn.addEventListener("click", () => {
     const y = btn.getAttribute("data-year");
@@ -169,6 +212,9 @@ document.querySelectorAll(".chip").forEach((btn) => {
     if (s) setActiveChip("data-sort", s);
 
     applyAndRender();
+
+    // 모바일에서는 선택 후 패널 자동 닫기
+    if (isMobile()) closePanel();
   });
 });
 
@@ -177,25 +223,39 @@ resetBtn?.addEventListener("click", () => {
   state.place = "all";
   state.sort = "latest";
 
-  document.querySelectorAll(".chip").forEach(b => b.classList.remove("active"));
+  document.querySelectorAll(".chip").forEach((b) => b.classList.remove("active"));
   setActiveChip("data-sort", "latest");
 
   applyAndRender();
+
+  if (isMobile()) closePanel();
 });
 
-// ✅ 스크롤 이동시 현재 위치 계속 저장(뒤로 갔을 때 정확히 복귀)
-window.addEventListener("scroll", () => {
-  const view = loadView();
-  if (!view) return;
+// 스크롤 이동시 현재 위치 계속 저장(뒤로 갔을 때 정확히 복귀)
+let scrollSaveTicking = false;
 
-  // 너무 자주 저장하지 않도록 간단히만
-  view.scrollY = window.scrollY;
-  sessionStorage.setItem(STORAGE_KEY, JSON.stringify(view));
-}, { passive: true });
+window.addEventListener(
+  "scroll",
+  () => {
+    const view = loadView();
+    if (!view) return;
+
+    if (scrollSaveTicking) return;
+
+    scrollSaveTicking = true;
+    window.requestAnimationFrame(() => {
+      view.scrollY = window.scrollY;
+      sessionStorage.setItem(STORAGE_KEY, JSON.stringify(view));
+      scrollSaveTicking = false;
+    });
+  },
+  { passive: true }
+);
 
 // ---------- init ----------
 (function init() {
   const view = loadView();
+
   if (view?.state) {
     state.year = view.state.year ?? "all";
     state.place = view.state.place ?? "all";
@@ -213,7 +273,6 @@ window.addEventListener("scroll", () => {
 /* =========================
    MOBILE SWIPE FOR DETAIL PAGE
    ========================= */
-
 (function () {
   const detailArea =
     document.querySelector(".detail-scroll") ||
@@ -231,13 +290,18 @@ window.addEventListener("scroll", () => {
   let deltaY = 0;
   let isTouching = false;
 
-  const SWIPE_THRESHOLD = 50;   // 최소 이동 거리
-  const VERTICAL_LIMIT = 35;    // 세로로 너무 많이 움직이면 무시
+  const SWIPE_THRESHOLD = 56;
+  const VERTICAL_LIMIT = 44;
+
+  function isInteractiveTarget(target) {
+    return !!target.closest("a, button, input, textarea, select");
+  }
 
   detailArea.addEventListener(
     "touchstart",
     (e) => {
       if (!e.touches || e.touches.length !== 1) return;
+      if (isInteractiveTarget(e.target)) return;
 
       isTouching = true;
       startX = e.touches[0].clientX;
@@ -265,17 +329,21 @@ window.addEventListener("scroll", () => {
       if (!isTouching) return;
       isTouching = false;
 
-      // 세로 스크롤 동작이면 무시
+      // 세로 스크롤이면 무시
       if (Math.abs(deltaY) > VERTICAL_LIMIT) return;
 
+      // 좌우 스와이프가 충분히 명확할 때만 작동
+      if (Math.abs(deltaX) < SWIPE_THRESHOLD) return;
+      if (Math.abs(deltaX) < Math.abs(deltaY) * 1.2) return;
+
       // 오른쪽으로 밀기 = 이전
-      if (deltaX > SWIPE_THRESHOLD && prevBtn) {
+      if (deltaX > 0 && prevBtn) {
         prevBtn.click();
         return;
       }
 
       // 왼쪽으로 밀기 = 다음
-      if (deltaX < -SWIPE_THRESHOLD && nextBtn) {
+      if (deltaX < 0 && nextBtn) {
         nextBtn.click();
       }
     },
