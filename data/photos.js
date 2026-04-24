@@ -7,10 +7,10 @@ const photos = [
     continent: "North America",
     extras: [
      "p330_1.jpg",
-    "p330_2.jpg",
+    "p330_5.jpg",
       "p330_3.jpg",
      "p330_4.jpg",
-    "p330_5.jpg",
+    "p330_2.jpg",
    "p330_6.jpg",
     "p330_7.jpg",
     "p330_8.jpg",
